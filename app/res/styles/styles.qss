@@ -1,3 +1,36 @@
+QMainWindow {
+    background-color: rgb(245, 245, 245);
+}
+
+QGroupBox {
+    border: none;
+}
+
+QLabel#wordCard {
+    color: rgb(10, 10, 10);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+QLineEdit#answerFieldEdit {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Arial;
+    color: rgb(10, 10, 10);
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-bottom: 1px solid rgb(85, 150, 255);
+}
+
+QLineEdit#answerFieldEdit:focus {
+    border-bottom: 2px solid rgb(85, 150, 255);
+}
+
+
 QLabel#lbl {
     font-size: 20px;
 }
