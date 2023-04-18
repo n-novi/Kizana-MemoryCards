@@ -1,3 +1,5 @@
+from PyQt6 import QtCore
+
 def main():
     print('Основная функция приложения')
 
