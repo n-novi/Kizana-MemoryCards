@@ -16,16 +16,20 @@ class Ui_MainWindow(object):
         self.listWidget = QtWidgets.QListWidget(parent=self.centralwidget)
         self.listWidget.setGeometry(QtCore.QRect(20, 70, 461, 531))
         self.listWidget.setObjectName("listWidget")
-        self.horizontalLayoutWidget = QtWidgets.QWidget(parent=self.centralwidget)
+        self.horizontalLayoutWidget = QtWidgets.QWidget(
+            parent=self.centralwidget)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(20, 610, 461, 61))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout = QtWidgets.QHBoxLayout(
+            self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButton = QtWidgets.QPushButton(parent=self.horizontalLayoutWidget)
+        self.pushButton = QtWidgets.QPushButton(
+            parent=self.horizontalLayoutWidget)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
-        self.pushButton_2 = QtWidgets.QPushButton(parent=self.horizontalLayoutWidget)
+        self.pushButton_2 = QtWidgets.QPushButton(
+            parent=self.horizontalLayoutWidget)
 
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout.addWidget(self.pushButton_2)
@@ -49,7 +53,7 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
 
-    f = open("../res/styles/styles.qss", 'r')
+    f = open("app/res/styles/styles.qss", 'r')
     styleData = f.read()
     f.close()
     app.setStyleSheet(styleData)
