@@ -1,0 +1,142 @@
+QMainWindow {
+    background-color: rgb(18, 18, 20);
+}
+
+QGroupBox#topPanel {
+    background-color: rgb(37, 36, 39);
+}
+
+QGroupBox {
+    border: none;
+}
+
+QGroupBox#topPanelGroup {
+    background-color: rgb(37, 36, 39);
+}
+
+QPushButton {
+    background-color: rgb(37, 36, 39);
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    height: 35px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14px;
+    /* outline: 1px solid rgb(66, 65, 67); */
+    outline: none;
+    margin: 0px 3px;
+    padding: 4px;
+}
+
+QPushButton:hover {
+    background-color: rgb(46, 45, 47);
+}
+
+QPushButton:pressed {
+    background-color: rgb(56, 55, 57);
+}
+
+QPushButton#nextButton {
+    image: url('app/res/img/next_light.png');
+}
+
+QPushButton#reloadButton {
+    image: url('app/res/img/reload_light.png');
+}
+
+QLabel#wordCard {
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 36, 39);
+    border-radius: 5px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+QLineEdit {
+    font-size: 16px;
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+    border-radius: 1px;
+    background-color: rgb(37, 36, 39);
+    border-bottom: 1px solid rgb(255, 255, 255);
+
+    padding: 1px 5px 1px 5px;
+}
+
+QLineEdit:focus {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+QLineEdit#answerFieldEdit {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(37, 36, 39);
+    border-radius: 5px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+QLineEdit#answerFieldEdit:focus {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+QLabel {
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    font-size: 14px;
+}
+
+QLabel#titleLabel {
+    font-size: 20px;
+}
+
+QLabel#dictName {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+QListWidget {
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 36, 39);
+    border-radius: 5px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14px;
+    /* outline: 1px solid rgb(66, 65, 67); */
+    outline: none;
+    padding: 5px;
+
+}
+
+QListWidget:item {
+    color: rgb(255, 255, 255);
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+QListWidget:item:hover {
+    background-color: rgb(46, 45, 47);
+}
+
+QListWidget:item:selected {
+    background-color: rgb(56, 55, 57);
+}
+
+QMessageBox {
+    background-color: rgb(18, 18, 20);
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    font-size: 14px;
+}
+
+QMessageBox QPushButton {
+    outline: none;
+}

@@ -11,11 +11,9 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 
-# Get the long description from the README file
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-# Get the long description from the README file
 with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
     install_requires = f.read()
 
@@ -27,7 +25,7 @@ setup(
     ]),
     entry_points={
         'console_scripts': [
-            'KizanaMC = src.main:main'
+            'KizanaMC = main:main'
         ]
     },
     version='0.0.1',
