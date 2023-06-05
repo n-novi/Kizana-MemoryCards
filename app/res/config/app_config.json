@@ -1,0 +1,30 @@
+{
+    "app_info": {
+        "app_company": "Kizana",
+        "app_title": "Flash...",
+        "author": [
+            "Аскерова Айлана Рагимовна",
+            "Кутушева Эльза Ибрагимовна",
+            "Новиков Никита Евгеньевич"
+        ],
+        "developer": [
+            "Новиков Н.Е."
+        ],
+        "app_version": "2.1"
+    },
+    "app_path": {
+        "icon": "app/res/icon/",
+        "img": "app/res/img/",
+        "database": "app/user/dictionary/",
+        "style": {
+            "light": "app/res/style/light.qss",
+            "dark": "app/res/style/dark.qss"
+        }
+    },
+    "app_settings": {
+        "theme": "dark"
+    },
+    "app_play_parameters": {
+        "mode": 1
+    }
+}
