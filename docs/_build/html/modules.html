@@ -1,0 +1,2345 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ru" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Модули &#8212; документация Kizana MemoryCards 2.1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=0abb3722"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/translations.js?v=29b1f277"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modules';</script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="Документация разработчика Kizana MemoryCards" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ru"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Перейти к основному содержанию</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">документация Kizana MemoryCards 2.1</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Поиск" aria-label="Поиск" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Поиск</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Модули</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Загрузите эту страницу">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/modules.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Скачать исходный файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Распечатать в PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Полноэкранный режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="светлая/темная" aria-label="светлая/темная" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Поиск" aria-label="Поиск" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Модули</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Содержание </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller"><code class="docutils literal notranslate"><span class="pre">Controller</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.db_path"><code class="docutils literal notranslate"><span class="pre">Controller.db_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.db_manager"><code class="docutils literal notranslate"><span class="pre">Controller.db_manager</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.table"><code class="docutils literal notranslate"><span class="pre">Controller.table</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.changedRow"><code class="docutils literal notranslate"><span class="pre">Controller.changedRow</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.end"><code class="docutils literal notranslate"><span class="pre">Controller.end</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.result"><code class="docutils literal notranslate"><span class="pre">Controller.result</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.curRowIndex"><code class="docutils literal notranslate"><span class="pre">Controller.curRowIndex</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.mistakesList"><code class="docutils literal notranslate"><span class="pre">Controller.mistakesList</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.user_answer_mistakes"><code class="docutils literal notranslate"><span class="pre">Controller.user_answer_mistakes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.add"><code class="docutils literal notranslate"><span class="pre">Controller.add()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.close"><code class="docutils literal notranslate"><span class="pre">Controller.close()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.delete"><code class="docutils literal notranslate"><span class="pre">Controller.delete()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.geDictTitle"><code class="docutils literal notranslate"><span class="pre">Controller.geDictTitle()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getChangedRow"><code class="docutils literal notranslate"><span class="pre">Controller.getChangedRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getCurIndex"><code class="docutils literal notranslate"><span class="pre">Controller.getCurIndex()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getEnd"><code class="docutils literal notranslate"><span class="pre">Controller.getEnd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getMistakesCounter"><code class="docutils literal notranslate"><span class="pre">Controller.getMistakesCounter()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getMistakesList"><code class="docutils literal notranslate"><span class="pre">Controller.getMistakesList()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getResult"><code class="docutils literal notranslate"><span class="pre">Controller.getResult()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getRow"><code class="docutils literal notranslate"><span class="pre">Controller.getRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getTable"><code class="docutils literal notranslate"><span class="pre">Controller.getTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getTableSize"><code class="docutils literal notranslate"><span class="pre">Controller.getTableSize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getUserMistakesList"><code class="docutils literal notranslate"><span class="pre">Controller.getUserMistakesList()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.match"><code class="docutils literal notranslate"><span class="pre">Controller.match()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.next"><code class="docutils literal notranslate"><span class="pre">Controller.next()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.prev"><code class="docutils literal notranslate"><span class="pre">Controller.prev()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.reopenDatabase"><code class="docutils literal notranslate"><span class="pre">Controller.reopenDatabase()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.replace"><code class="docutils literal notranslate"><span class="pre">Controller.replace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.reset"><code class="docutils literal notranslate"><span class="pre">Controller.reset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.setChangedRow"><code class="docutils literal notranslate"><span class="pre">Controller.setChangedRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.shuffleCards"><code class="docutils literal notranslate"><span class="pre">Controller.shuffleCards()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.sortTable"><code class="docutils literal notranslate"><span class="pre">Controller.sortTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.update"><code class="docutils literal notranslate"><span class="pre">Controller.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager"><code class="docutils literal notranslate"><span class="pre">DataBaseManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.db_path"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.db_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.cursor"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.cursor</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.table_name"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.table_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.connection"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.connection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.close"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.close()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.createTable"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.createTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.delete"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.delete()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.executeQuery"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.executeQuery()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.getData"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.getData()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.insert"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.insert()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.setConnection"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.setConnection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.update"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application"><code class="docutils literal notranslate"><span class="pre">Application</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.config_path"><code class="docutils literal notranslate"><span class="pre">Application.config_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.app_settings"><code class="docutils literal notranslate"><span class="pre">Application.app_settings</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.app_info"><code class="docutils literal notranslate"><span class="pre">Application.app_info</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.app_play_parameters"><code class="docutils literal notranslate"><span class="pre">Application.app_play_parameters</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.img_folder_path"><code class="docutils literal notranslate"><span class="pre">Application.img_folder_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.icon_folder_path"><code class="docutils literal notranslate"><span class="pre">Application.icon_folder_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.dicts_folder_path"><code class="docutils literal notranslate"><span class="pre">Application.dicts_folder_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.theme_file_path"><code class="docutils literal notranslate"><span class="pre">Application.theme_file_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.mode"><code class="docutils literal notranslate"><span class="pre">Application.mode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.theme"><code class="docutils literal notranslate"><span class="pre">Application.theme</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.mainWindow"><code class="docutils literal notranslate"><span class="pre">Application.mainWindow</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.controller"><code class="docutils literal notranslate"><span class="pre">Application.controller</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.playSession"><code class="docutils literal notranslate"><span class="pre">Application.playSession</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.MODE"><code class="docutils literal notranslate"><span class="pre">Application.MODE</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.MODE.Answer"><code class="docutils literal notranslate"><span class="pre">Application.MODE.Answer</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.MODE.Test"><code class="docutils literal notranslate"><span class="pre">Application.MODE.Test</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.MODE.View"><code class="docutils literal notranslate"><span class="pre">Application.MODE.View</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.THEME"><code class="docutils literal notranslate"><span class="pre">Application.THEME</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.THEME.DARK"><code class="docutils literal notranslate"><span class="pre">Application.THEME.DARK</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.THEME.LIGHT"><code class="docutils literal notranslate"><span class="pre">Application.THEME.LIGHT</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.configApplication"><code class="docutils literal notranslate"><span class="pre">Application.configApplication()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getAppInfo"><code class="docutils literal notranslate"><span class="pre">Application.getAppInfo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getAppPlayParameters"><code class="docutils literal notranslate"><span class="pre">Application.getAppPlayParameters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getAppSettings"><code class="docutils literal notranslate"><span class="pre">Application.getAppSettings()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getConfigPath"><code class="docutils literal notranslate"><span class="pre">Application.getConfigPath()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getController"><code class="docutils literal notranslate"><span class="pre">Application.getController()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getDictsFolder"><code class="docutils literal notranslate"><span class="pre">Application.getDictsFolder()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getIconFolder"><code class="docutils literal notranslate"><span class="pre">Application.getIconFolder()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getMode"><code class="docutils literal notranslate"><span class="pre">Application.getMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getPlaySession"><code class="docutils literal notranslate"><span class="pre">Application.getPlaySession()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getTheme"><code class="docutils literal notranslate"><span class="pre">Application.getTheme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getThemeFiles"><code class="docutils literal notranslate"><span class="pre">Application.getThemeFiles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.openMainWindow"><code class="docutils literal notranslate"><span class="pre">Application.openMainWindow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.setController"><code class="docutils literal notranslate"><span class="pre">Application.setController()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.setMode"><code class="docutils literal notranslate"><span class="pre">Application.setMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.setPlaySession"><code class="docutils literal notranslate"><span class="pre">Application.setPlaySession()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.setTheme"><code class="docutils literal notranslate"><span class="pre">Application.setTheme()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow"><code class="docutils literal notranslate"><span class="pre">MainWindow</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.app"><code class="docutils literal notranslate"><span class="pre">MainWindow.app</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.sideMenu"><code class="docutils literal notranslate"><span class="pre">MainWindow.sideMenu</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.playPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.playPanel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.editDictPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.editDictPanel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.buildEditDictPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.buildEditDictPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.buildPlayPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.buildPlayPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.buildSideMenu"><code class="docutils literal notranslate"><span class="pre">MainWindow.buildSideMenu()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.getApplication"><code class="docutils literal notranslate"><span class="pre">MainWindow.getApplication()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.getEditDictPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.getEditDictPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.getPlayPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.getPlayPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.load_icon"><code class="docutils literal notranslate"><span class="pre">MainWindow.load_icon()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.load_style"><code class="docutils literal notranslate"><span class="pre">MainWindow.load_style()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setAppInfo"><code class="docutils literal notranslate"><span class="pre">MainWindow.setAppInfo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setPlayPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.setPlayPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setPlayParameters"><code class="docutils literal notranslate"><span class="pre">MainWindow.setPlayParameters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setSettings"><code class="docutils literal notranslate"><span class="pre">MainWindow.setSettings()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setUiTheme"><code class="docutils literal notranslate"><span class="pre">MainWindow.setUiTheme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.svg_change_color"><code class="docutils literal notranslate"><span class="pre">MainWindow.svg_change_color()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu"><code class="docutils literal notranslate"><span class="pre">SideMenu</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.actionMenuItem"><code class="docutils literal notranslate"><span class="pre">SideMenu.actionMenuItem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.animationSideMenu"><code class="docutils literal notranslate"><span class="pre">SideMenu.animationSideMenu()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.fillListMenuItem"><code class="docutils literal notranslate"><span class="pre">SideMenu.fillListMenuItem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.initSideMenu"><code class="docutils literal notranslate"><span class="pre">SideMenu.initSideMenu()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.menu_item"><code class="docutils literal notranslate"><span class="pre">SideMenu.menu_item()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.offMenuItems"><code class="docutils literal notranslate"><span class="pre">SideMenu.offMenuItems()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.main_win"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.main_win</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.selectedDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.selectedDict</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.dicts"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.dicts</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.dicts_folder_path"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.dicts_folder_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.addElement"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.addElement()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.copyDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.copyDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.createDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.createDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.deleteDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.deleteDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.dict_name_uniq"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.dict_name_uniq()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.getDicts"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.getDicts()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.name_selection"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.name_selection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.openDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.openDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.renameDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.renameDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.searchDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.searchDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.selectDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.selectDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.setDictsList"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.setDictsList()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.updateListDicts"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.updateListDicts()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.validation"><code class="docutils literal notranslate"><span class="pre">validation()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu.changedMode"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu.changedMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu.saveParameters"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu.saveParameters()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings_side_menu.SettingsSideMenu"><code class="docutils literal notranslate"><span class="pre">SettingsSideMenu</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings_side_menu.SettingsSideMenu.changedTheme"><code class="docutils literal notranslate"><span class="pre">SettingsSideMenu.changedTheme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings_side_menu.SettingsSideMenu.saveSettings"><code class="docutils literal notranslate"><span class="pre">SettingsSideMenu.saveSettings()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel"><code class="docutils literal notranslate"><span class="pre">EditDictPanel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.main_win"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.main_win</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.app"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.app</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.openEditDictPanelStatus"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.openEditDictPanelStatus</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.addRow"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.addRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.animationEditDictPanel"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.animationEditDictPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.clickedCell"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.clickedCell()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.deleteRow"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.deleteRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.getOpenEditDictPanelStatus"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.getOpenEditDictPanelStatus()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.initEditDictPanel"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.initEditDictPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.setDictTable"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.setDictTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.sortWord"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.sortWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.updateDictTable"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.updateDictTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.updateRow"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.updateRow()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.validation"><code class="docutils literal notranslate"><span class="pre">validation()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel"><code class="docutils literal notranslate"><span class="pre">PlayPanel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel.dictClose"><code class="docutils literal notranslate"><span class="pre">PlayPanel.dictClose()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel.openPage"><code class="docutils literal notranslate"><span class="pre">PlayPanel.openPage()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode"><code class="docutils literal notranslate"><span class="pre">AnswerMode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.main_win"><code class="docutils literal notranslate"><span class="pre">AnswerMode.main_win</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.app"><code class="docutils literal notranslate"><span class="pre">AnswerMode.app</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.checkAnswer"><code class="docutils literal notranslate"><span class="pre">AnswerMode.checkAnswer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.initAnswerMode"><code class="docutils literal notranslate"><span class="pre">AnswerMode.initAnswerMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.nextWord"><code class="docutils literal notranslate"><span class="pre">AnswerMode.nextWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.reload"><code class="docutils literal notranslate"><span class="pre">AnswerMode.reload()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.setInfo"><code class="docutils literal notranslate"><span class="pre">AnswerMode.setInfo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.setWord"><code class="docutils literal notranslate"><span class="pre">AnswerMode.setWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.shuffleCards"><code class="docutils literal notranslate"><span class="pre">AnswerMode.shuffleCards()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode"><code class="docutils literal notranslate"><span class="pre">ViewMode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.initViewMode"><code class="docutils literal notranslate"><span class="pre">ViewMode.initViewMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.nextWord"><code class="docutils literal notranslate"><span class="pre">ViewMode.nextWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.prevWord"><code class="docutils literal notranslate"><span class="pre">ViewMode.prevWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.reload"><code class="docutils literal notranslate"><span class="pre">ViewMode.reload()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.setInfo"><code class="docutils literal notranslate"><span class="pre">ViewMode.setInfo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.setWord"><code class="docutils literal notranslate"><span class="pre">ViewMode.setWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.shuffleCards"><code class="docutils literal notranslate"><span class="pre">ViewMode.shuffleCards()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.translate"><code class="docutils literal notranslate"><span class="pre">ViewMode.translate()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result_window.ResultWindow"><code class="docutils literal notranslate"><span class="pre">ResultWindow</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result_window.ResultWindow.initResultWindow"><code class="docutils literal notranslate"><span class="pre">ResultWindow.initResultWindow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result_window.ResultWindow.setMistakeTable"><code class="docutils literal notranslate"><span class="pre">ResultWindow.setMistakeTable()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>Модули<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Состав модуля</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Поиск</span></a></p></li>
+</ul>
+<dl class="py class" id="module-Controller">
+<dt class="sig sig-object py" id="Controller.Controller">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Controller.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller" title="Link to this definition">#</a></dt>
+<dd><p>Класс Controller управляет взаимодействием между пользовательским интерфейсом и базой данных.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.db_path">
+<span class="sig-name descname"><span class="pre">db_path</span></span><a class="headerlink" href="#Controller.Controller.db_path" title="Link to this definition">#</a></dt>
+<dd><p>Путь к файлу базы данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.db_manager">
+<span class="sig-name descname"><span class="pre">db_manager</span></span><a class="headerlink" href="#Controller.Controller.db_manager" title="Link to this definition">#</a></dt>
+<dd><p>Экземпляр класса DataBaseManager.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#DataBaseManager.DataBaseManager" title="DataBaseManager.DataBaseManager">DataBaseManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#Controller.Controller.table" title="Link to this definition">#</a></dt>
+<dd><p>Список кортежей, представляющих записи базы данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.changedRow">
+<span class="sig-name descname"><span class="pre">changedRow</span></span><a class="headerlink" href="#Controller.Controller.changedRow" title="Link to this definition">#</a></dt>
+<dd><p>Измененная запись.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.end">
+<span class="sig-name descname"><span class="pre">end</span></span><a class="headerlink" href="#Controller.Controller.end" title="Link to this definition">#</a></dt>
+<dd><p>Указывает на достижение конца таблицы во время навигации.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.result">
+<span class="sig-name descname"><span class="pre">result</span></span><a class="headerlink" href="#Controller.Controller.result" title="Link to this definition">#</a></dt>
+<dd><p>Результат сопоставления введенного пользователем слова с ожидаемым.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.curRowIndex">
+<span class="sig-name descname"><span class="pre">curRowIndex</span></span><a class="headerlink" href="#Controller.Controller.curRowIndex" title="Link to this definition">#</a></dt>
+<dd><p>Индекс текущей строки, отображаемой пользователю.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.mistakesList">
+<span class="sig-name descname"><span class="pre">mistakesList</span></span><a class="headerlink" href="#Controller.Controller.mistakesList" title="Link to this definition">#</a></dt>
+<dd><p>Список кортежей, представляющих ошибки, допущенные пользователем.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Controller.Controller.user_answer_mistakes">
+<span class="sig-name descname"><span class="pre">user_answer_mistakes</span></span><a class="headerlink" href="#Controller.Controller.user_answer_mistakes" title="Link to this definition">#</a></dt>
+<dd><p>Список неправильных ответов пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.add" title="Link to this definition">#</a></dt>
+<dd><p>Добавить запись в базу данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>record</strong> (<em>tuple</em>) – Добавляемая запись.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.close" title="Link to this definition">#</a></dt>
+<dd><p>Закрыть соединение с базой данных.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.delete" title="Link to this definition">#</a></dt>
+<dd><p>Удалить запись из базы данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>record</strong> (<em>tuple</em>) – Удаляемая запись.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.geDictTitle">
+<span class="sig-name descname"><span class="pre">geDictTitle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.geDictTitle" title="Link to this definition">#</a></dt>
+<dd><p>Извлечь и вернуть название базы данных из ее пути.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Название базы данных.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getChangedRow">
+<span class="sig-name descname"><span class="pre">getChangedRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getChangedRow" title="Link to this definition">#</a></dt>
+<dd><p>Получить измененную запись.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Измененная запись.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getCurIndex">
+<span class="sig-name descname"><span class="pre">getCurIndex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getCurIndex" title="Link to this definition">#</a></dt>
+<dd><p>Получить индекс текущей записи.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Индекс текущей записи.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getEnd">
+<span class="sig-name descname"><span class="pre">getEnd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getEnd" title="Link to this definition">#</a></dt>
+<dd><p>Получить значение, указывающее на достижение конца таблицы.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Значение, указывающее на достижение конца таблицы.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getMistakesCounter">
+<span class="sig-name descname"><span class="pre">getMistakesCounter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getMistakesCounter" title="Link to this definition">#</a></dt>
+<dd><p>Получить количество ошибок.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Количество ошибок.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getMistakesList">
+<span class="sig-name descname"><span class="pre">getMistakesList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getMistakesList" title="Link to this definition">#</a></dt>
+<dd><p>Получить список ошибок.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Список ошибок.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getResult">
+<span class="sig-name descname"><span class="pre">getResult</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getResult" title="Link to this definition">#</a></dt>
+<dd><p>Получить результат проверки совпадения слов.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Результат проверки совпадения слов.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getRow">
+<span class="sig-name descname"><span class="pre">getRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getRow" title="Link to this definition">#</a></dt>
+<dd><p>Получить текущую запись из таблицы.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Текущая запись.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getTable">
+<span class="sig-name descname"><span class="pre">getTable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getTable" title="Link to this definition">#</a></dt>
+<dd><p>Получить таблицу записей.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Таблица записей.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getTableSize">
+<span class="sig-name descname"><span class="pre">getTableSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getTableSize" title="Link to this definition">#</a></dt>
+<dd><p>Получить размер таблицы записей.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Размер таблицы записей.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.getUserMistakesList">
+<span class="sig-name descname"><span class="pre">getUserMistakesList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.getUserMistakesList" title="Link to this definition">#</a></dt>
+<dd><p>Получить список неправильных ответов пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Список неправильных ответов пользователя.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.match">
+<span class="sig-name descname"><span class="pre">match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.match" title="Link to this definition">#</a></dt>
+<dd><p>Проверить совпадение введенного пользователем слова с ожидаемым.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>word</strong> (<em>str</em>) – Введенное пользователем слово.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.next">
+<span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.next" title="Link to this definition">#</a></dt>
+<dd><p>Перейти к следующей записи в таблице.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cycle</strong> (<em>bool</em>) – Если True, то при достижении конца таблицы переходит к началу.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.prev">
+<span class="sig-name descname"><span class="pre">prev</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.prev" title="Link to this definition">#</a></dt>
+<dd><p>Перейти к предыдущей записи в таблице.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cycle</strong> (<em>bool</em>) – Если True, то при достижении начала таблицы переходит к концу.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.reopenDatabase">
+<span class="sig-name descname"><span class="pre">reopenDatabase</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.reopenDatabase" title="Link to this definition">#</a></dt>
+<dd><p>Переоткрыть базу данных и обновить таблицу.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.replace" title="Link to this definition">#</a></dt>
+<dd><p>Заменить столбцы 1 и 2 местами для каждой записи в таблице.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.reset" title="Link to this definition">#</a></dt>
+<dd><p>Сбросить состояние контроллера.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.setChangedRow">
+<span class="sig-name descname"><span class="pre">setChangedRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">changedRow</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.setChangedRow" title="Link to this definition">#</a></dt>
+<dd><p>Установить измененную запись.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>changedRow</strong> (<em>tuple</em>) – Измененная запись.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.shuffleCards">
+<span class="sig-name descname"><span class="pre">shuffleCards</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.shuffleCards" title="Link to this definition">#</a></dt>
+<dd><p>Перемешать записи в таблице.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.sortTable">
+<span class="sig-name descname"><span class="pre">sortTable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.sortTable" title="Link to this definition">#</a></dt>
+<dd><p>Сортировка таблицы по второму столбцу (индекс 1).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Controller.Controller.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.update" title="Link to this definition">#</a></dt>
+<dd><p>Обновить запись в базе данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>int</em>) – Идентификатор записи для обновления.</p></li>
+<li><p><strong>record</strong> (<em>tuple</em>) – Обновленная запись.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-DataBaseManager">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DataBaseManager.</span></span><span class="sig-name descname"><span class="pre">DataBaseManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления базой данных SQLite.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.db_path">
+<span class="sig-name descname"><span class="pre">db_path</span></span><a class="headerlink" href="#DataBaseManager.DataBaseManager.db_path" title="Link to this definition">#</a></dt>
+<dd><p>Путь к файлу базы данных SQLite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><a class="headerlink" href="#DataBaseManager.DataBaseManager.cursor" title="Link to this definition">#</a></dt>
+<dd><p>Объект курсора для выполнения запросов.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sqlite3.Cursor or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.table_name">
+<span class="sig-name descname"><span class="pre">table_name</span></span><a class="headerlink" href="#DataBaseManager.DataBaseManager.table_name" title="Link to this definition">#</a></dt>
+<dd><p>Имя таблицы в базе данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.connection">
+<span class="sig-name descname"><span class="pre">connection</span></span><a class="headerlink" href="#DataBaseManager.DataBaseManager.connection" title="Link to this definition">#</a></dt>
+<dd><p>Объект соединения с базой данных SQLite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sqlite3.Connection or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager.close" title="Link to this definition">#</a></dt>
+<dd><p>Закрывает соединение с базой данных SQLite.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.createTable">
+<span class="sig-name descname"><span class="pre">createTable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager.createTable" title="Link to this definition">#</a></dt>
+<dd><p>Создает таблицу в базе данных SQLite.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager.delete" title="Link to this definition">#</a></dt>
+<dd><p>Удаляет запись из базы данных SQLite по идентификатору.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – Идентификатор записи для удаления.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.executeQuery">
+<span class="sig-name descname"><span class="pre">executeQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager.executeQuery" title="Link to this definition">#</a></dt>
+<dd><p>Выполняет SQL-запрос к базе данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – SQL-запрос.</p></li>
+<li><p><strong>parameters</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Параметры запроса. По умолчанию пустой кортеж.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.getData">
+<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager.getData" title="Link to this definition">#</a></dt>
+<dd><p>Получает данные из базы данных SQLite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>order</strong> (<em>str</em><em>, </em><em>optional</em>) – Опциональный параметр сортировки данных. По умолчанию пустая строка.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Данные из базы данных.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.insert">
+<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager.insert" title="Link to this definition">#</a></dt>
+<dd><p>Добавляет запись в базу данных SQLite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>record</strong> (<em>tuple</em>) – Запись для добавления.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.setConnection">
+<span class="sig-name descname"><span class="pre">setConnection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager.setConnection" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает соединение с базой данных SQLite.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DataBaseManager.DataBaseManager.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DataBaseManager.DataBaseManager.update" title="Link to this definition">#</a></dt>
+<dd><p>Обновляет запись в базе данных SQLite по идентификатору.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>int</em>) – Идентификатор записи для обновления.</p></li>
+<li><p><strong>record</strong> (<em>tuple</em>) – Новые данные записи.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-application">
+<dt class="sig sig-object py" id="application.Application">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">application.</span></span><span class="sig-name descname"><span class="pre">Application</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#application.Application" title="Link to this definition">#</a></dt>
+<dd><p>Класс приложения, управляющий графическим интерфейсом и логикой приложения.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.config_path">
+<span class="sig-name descname"><span class="pre">config_path</span></span><a class="headerlink" href="#application.Application.config_path" title="Link to this definition">#</a></dt>
+<dd><p>Путь к файлу конфигурации приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.app_settings">
+<span class="sig-name descname"><span class="pre">app_settings</span></span><a class="headerlink" href="#application.Application.app_settings" title="Link to this definition">#</a></dt>
+<dd><p>Настройки приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.app_info">
+<span class="sig-name descname"><span class="pre">app_info</span></span><a class="headerlink" href="#application.Application.app_info" title="Link to this definition">#</a></dt>
+<dd><p>Информация о приложении.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.app_play_parameters">
+<span class="sig-name descname"><span class="pre">app_play_parameters</span></span><a class="headerlink" href="#application.Application.app_play_parameters" title="Link to this definition">#</a></dt>
+<dd><p>Параметры игровой сессии.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.img_folder_path">
+<span class="sig-name descname"><span class="pre">img_folder_path</span></span><a class="headerlink" href="#application.Application.img_folder_path" title="Link to this definition">#</a></dt>
+<dd><p>Путь к папке с изображениями.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.icon_folder_path">
+<span class="sig-name descname"><span class="pre">icon_folder_path</span></span><a class="headerlink" href="#application.Application.icon_folder_path" title="Link to this definition">#</a></dt>
+<dd><p>Путь к папке с иконками.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.dicts_folder_path">
+<span class="sig-name descname"><span class="pre">dicts_folder_path</span></span><a class="headerlink" href="#application.Application.dicts_folder_path" title="Link to this definition">#</a></dt>
+<dd><p>Путь к папке с базами данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.theme_file_path">
+<span class="sig-name descname"><span class="pre">theme_file_path</span></span><a class="headerlink" href="#application.Application.theme_file_path" title="Link to this definition">#</a></dt>
+<dd><p>Пути к файлам тем оформления.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.mode">
+<span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#application.Application.mode" title="Link to this definition">#</a></dt>
+<dd><p>Режим работы приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#application.Application.MODE" title="application.Application.MODE">Application.MODE</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.theme">
+<span class="sig-name descname"><span class="pre">theme</span></span><a class="headerlink" href="#application.Application.theme" title="Link to this definition">#</a></dt>
+<dd><p>Тема оформления приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#application.Application.THEME" title="application.Application.THEME">Application.THEME</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.mainWindow">
+<span class="sig-name descname"><span class="pre">mainWindow</span></span><a class="headerlink" href="#application.Application.mainWindow" title="Link to this definition">#</a></dt>
+<dd><p>Основное окно приложения.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.controller">
+<span class="sig-name descname"><span class="pre">controller</span></span><a class="headerlink" href="#application.Application.controller" title="Link to this definition">#</a></dt>
+<dd><p>Контроллер приложения.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.playSession">
+<span class="sig-name descname"><span class="pre">playSession</span></span><a class="headerlink" href="#application.Application.playSession" title="Link to this definition">#</a></dt>
+<dd><p>Флаг игровой сессии.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="application.Application.MODE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MODE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.MODE" title="Link to this definition">#</a></dt>
+<dd><p>Перечисление режимов работы приложения.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.MODE.Answer">
+<span class="sig-name descname"><span class="pre">Answer</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#application.Application.MODE.Answer" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.MODE.Test">
+<span class="sig-name descname"><span class="pre">Test</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#application.Application.MODE.Test" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.MODE.View">
+<span class="sig-name descname"><span class="pre">View</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#application.Application.MODE.View" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="application.Application.THEME">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">THEME</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.THEME" title="Link to this definition">#</a></dt>
+<dd><p>Перечисление тем оформления приложения.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.THEME.DARK">
+<span class="sig-name descname"><span class="pre">DARK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#application.Application.THEME.DARK" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="application.Application.THEME.LIGHT">
+<span class="sig-name descname"><span class="pre">LIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#application.Application.THEME.LIGHT" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.configApplication">
+<span class="sig-name descname"><span class="pre">configApplication</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.configApplication" title="Link to this definition">#</a></dt>
+<dd><p>Конфигурация приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getAppInfo">
+<span class="sig-name descname"><span class="pre">getAppInfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getAppInfo" title="Link to this definition">#</a></dt>
+<dd><p>Получить информацию о приложении.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getAppPlayParameters">
+<span class="sig-name descname"><span class="pre">getAppPlayParameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getAppPlayParameters" title="Link to this definition">#</a></dt>
+<dd><p>Получить параметры игровой сессии.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getAppSettings">
+<span class="sig-name descname"><span class="pre">getAppSettings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getAppSettings" title="Link to this definition">#</a></dt>
+<dd><p>Получить настройки приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getConfigPath">
+<span class="sig-name descname"><span class="pre">getConfigPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getConfigPath" title="Link to this definition">#</a></dt>
+<dd><p>Получить путь к файлу конфигурации приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getController">
+<span class="sig-name descname"><span class="pre">getController</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getController" title="Link to this definition">#</a></dt>
+<dd><p>Получить контроллер приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getDictsFolder">
+<span class="sig-name descname"><span class="pre">getDictsFolder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getDictsFolder" title="Link to this definition">#</a></dt>
+<dd><p>Получить путь к папке с базами данных.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getIconFolder">
+<span class="sig-name descname"><span class="pre">getIconFolder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getIconFolder" title="Link to this definition">#</a></dt>
+<dd><p>Получить путь к папке с иконками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getMode">
+<span class="sig-name descname"><span class="pre">getMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getMode" title="Link to this definition">#</a></dt>
+<dd><p>Получить режим работы приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getPlaySession">
+<span class="sig-name descname"><span class="pre">getPlaySession</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getPlaySession" title="Link to this definition">#</a></dt>
+<dd><p>Получить флаг игровой сессии.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getTheme">
+<span class="sig-name descname"><span class="pre">getTheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getTheme" title="Link to this definition">#</a></dt>
+<dd><p>Получить тему оформления приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.getThemeFiles">
+<span class="sig-name descname"><span class="pre">getThemeFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.getThemeFiles" title="Link to this definition">#</a></dt>
+<dd><p>Получить пути к файлам тем оформления.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.openMainWindow">
+<span class="sig-name descname"><span class="pre">openMainWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.openMainWindow" title="Link to this definition">#</a></dt>
+<dd><p>Открыть основное окно приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.setController">
+<span class="sig-name descname"><span class="pre">setController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">controller</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.setController" title="Link to this definition">#</a></dt>
+<dd><p>Установить контроллер приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>controller</strong> (<a class="reference internal" href="#Controller.Controller" title="Controller.Controller"><em>Controller</em></a>) – Контроллер приложения.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.setMode">
+<span class="sig-name descname"><span class="pre">setMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.setMode" title="Link to this definition">#</a></dt>
+<dd><p>Установить режим работы приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> (<a class="reference internal" href="#application.Application.MODE" title="application.Application.MODE"><em>Application.MODE</em></a>) – Режим работы приложения.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.setPlaySession">
+<span class="sig-name descname"><span class="pre">setPlaySession</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">playSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.setPlaySession" title="Link to this definition">#</a></dt>
+<dd><p>Установить флаг игровой сессии.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>playSession</strong> (<em>bool</em>) – Флаг игровой сессии.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="application.Application.setTheme">
+<span class="sig-name descname"><span class="pre">setTheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theme</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#application.Application.setTheme" title="Link to this definition">#</a></dt>
+<dd><p>Установить тему оформления приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>theme</strong> (<a class="reference internal" href="#application.Application.THEME" title="application.Application.THEME"><em>Application.THEME</em></a>) – Тема оформления.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-main_window">
+<dt class="sig sig-object py" id="main_window.MainWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main_window.</span></span><span class="sig-name descname"><span class="pre">MainWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow" title="Link to this definition">#</a></dt>
+<dd><p>Главное окно приложения.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main_window.MainWindow.app">
+<span class="sig-name descname"><span class="pre">app</span></span><a class="headerlink" href="#main_window.MainWindow.app" title="Link to this definition">#</a></dt>
+<dd><p>Объект приложения.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main_window.MainWindow.sideMenu">
+<span class="sig-name descname"><span class="pre">sideMenu</span></span><a class="headerlink" href="#main_window.MainWindow.sideMenu" title="Link to this definition">#</a></dt>
+<dd><p>Панель бокового меню.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main_window.MainWindow.playPanel">
+<span class="sig-name descname"><span class="pre">playPanel</span></span><a class="headerlink" href="#main_window.MainWindow.playPanel" title="Link to this definition">#</a></dt>
+<dd><p>Панель воспроизведения словаря.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main_window.MainWindow.editDictPanel">
+<span class="sig-name descname"><span class="pre">editDictPanel</span></span><a class="headerlink" href="#main_window.MainWindow.editDictPanel" title="Link to this definition">#</a></dt>
+<dd><p>Панель редактирования словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.buildEditDictPanel">
+<span class="sig-name descname"><span class="pre">buildEditDictPanel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.buildEditDictPanel" title="Link to this definition">#</a></dt>
+<dd><p>Создает панель редактирования словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.buildPlayPanel">
+<span class="sig-name descname"><span class="pre">buildPlayPanel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.buildPlayPanel" title="Link to this definition">#</a></dt>
+<dd><p>Создает панель воспроизведения словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.buildSideMenu">
+<span class="sig-name descname"><span class="pre">buildSideMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.buildSideMenu" title="Link to this definition">#</a></dt>
+<dd><p>Создает панель бокового меню.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.getApplication">
+<span class="sig-name descname"><span class="pre">getApplication</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.getApplication" title="Link to this definition">#</a></dt>
+<dd><p>Получает объект приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Объект приложения.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#application.Application" title="application.Application">Application</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.getEditDictPanel">
+<span class="sig-name descname"><span class="pre">getEditDictPanel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.getEditDictPanel" title="Link to this definition">#</a></dt>
+<dd><p>Получает панель редактирования словаря.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Панель редактирования словаря.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#edit_dict_panel.EditDictPanel" title="edit_dict_panel.EditDictPanel">EditDictPanel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.getPlayPanel">
+<span class="sig-name descname"><span class="pre">getPlayPanel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.getPlayPanel" title="Link to this definition">#</a></dt>
+<dd><p>Получает панель воспроизведения словаря.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Панель воспроизведения словаря.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#play_panel.PlayPanel" title="play_panel.PlayPanel">PlayPanel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.load_icon">
+<span class="sig-name descname"><span class="pre">load_icon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.load_icon" title="Link to this definition">#</a></dt>
+<dd><p>Загружает иконки для элементов интерфейса из файлов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.load_style">
+<span class="sig-name descname"><span class="pre">load_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.load_style" title="Link to this definition">#</a></dt>
+<dd><p>Загружает стили интерфейса из файла.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>style_file</strong> (<em>str</em>) – Путь к файлу стилей.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.setAppInfo">
+<span class="sig-name descname"><span class="pre">setAppInfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.setAppInfo" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает информацию о приложении в главном окне.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.setPlayPanel">
+<span class="sig-name descname"><span class="pre">setPlayPanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">playPanel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.setPlayPanel" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает панель воспроизведения словаря.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>playPanel</strong> – Панель воспроизведения словаря.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.setPlayParameters">
+<span class="sig-name descname"><span class="pre">setPlayParameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.setPlayParameters" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает параметры воспроизведения приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.setSettings">
+<span class="sig-name descname"><span class="pre">setSettings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.setSettings" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает настройки приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.setUiTheme">
+<span class="sig-name descname"><span class="pre">setUiTheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.setUiTheme" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает тему интерфейса приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main_window.MainWindow.svg_change_color">
+<span class="sig-name descname"><span class="pre">svg_change_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main_window.MainWindow.svg_change_color" title="Link to this definition">#</a></dt>
+<dd><p>Меняет цвет SVG-иконок.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>color</strong> (<em>str</em>) – Цвет в формате RGB.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-side_menu">
+<dt class="sig sig-object py" id="side_menu.SideMenu">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">side_menu.</span></span><span class="sig-name descname"><span class="pre">SideMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#side_menu.SideMenu" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления боковым меню приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>main_win</strong> – Основное окно приложения.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="side_menu.SideMenu.actionMenuItem">
+<span class="sig-name descname"><span class="pre">actionMenuItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#side_menu.SideMenu.actionMenuItem" title="Link to this definition">#</a></dt>
+<dd><p>Выполнение действия для выбранного элемента меню.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>button</strong> – Выбранный элемент меню.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="side_menu.SideMenu.animationSideMenu">
+<span class="sig-name descname"><span class="pre">animationSideMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#side_menu.SideMenu.animationSideMenu" title="Link to this definition">#</a></dt>
+<dd><p>Анимация открытия и закрытия бокового меню.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="side_menu.SideMenu.fillListMenuItem">
+<span class="sig-name descname"><span class="pre">fillListMenuItem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#side_menu.SideMenu.fillListMenuItem" title="Link to this definition">#</a></dt>
+<dd><p>Заполнение списка элементов (кнопок) меню.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="side_menu.SideMenu.initSideMenu">
+<span class="sig-name descname"><span class="pre">initSideMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#side_menu.SideMenu.initSideMenu" title="Link to this definition">#</a></dt>
+<dd><p>Инициализация бокового меню.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="side_menu.SideMenu.menu_item">
+<span class="sig-name descname"><span class="pre">menu_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#side_menu.SideMenu.menu_item" title="Link to this definition">#</a></dt>
+<dd><p>Переключение пунктов меню.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>button</strong> – Выбранный элемент меню.</p></li>
+<li><p><strong>page</strong> – Номер страницы для переключения.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="side_menu.SideMenu.offMenuItems">
+<span class="sig-name descname"><span class="pre">offMenuItems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">itemOn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#side_menu.SideMenu.offMenuItems" title="Link to this definition">#</a></dt>
+<dd><p>Выключение всех элементов меню кроме одного.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>itemOn</strong> – Элемент меню, который нужно оставить включенным.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-dicts_side_menu">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dicts_side_menu.</span></span><span class="sig-name descname"><span class="pre">DictsSideMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления боковым меню со списком словарей.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>main_win</strong> – Основное окно приложения.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.main_win">
+<span class="sig-name descname"><span class="pre">main_win</span></span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.main_win" title="Link to this definition">#</a></dt>
+<dd><p>Основное окно приложения.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.selectedDict">
+<span class="sig-name descname"><span class="pre">selectedDict</span></span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.selectedDict" title="Link to this definition">#</a></dt>
+<dd><p>Имя выбранного словаря.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.dicts">
+<span class="sig-name descname"><span class="pre">dicts</span></span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.dicts" title="Link to this definition">#</a></dt>
+<dd><p>Список имен файлов словарей.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.dicts_folder_path">
+<span class="sig-name descname"><span class="pre">dicts_folder_path</span></span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.dicts_folder_path" title="Link to this definition">#</a></dt>
+<dd><p>Путь к папке с файлами словарей.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.addElement">
+<span class="sig-name descname"><span class="pre">addElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.addElement" title="Link to this definition">#</a></dt>
+<dd><p>Добавляет элемент в список словарей.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Текст элемента.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.copyDict">
+<span class="sig-name descname"><span class="pre">copyDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.copyDict" title="Link to this definition">#</a></dt>
+<dd><p>Копирует выбранный словарь.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.createDict">
+<span class="sig-name descname"><span class="pre">createDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.createDict" title="Link to this definition">#</a></dt>
+<dd><p>Создает новый словарь.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.deleteDict">
+<span class="sig-name descname"><span class="pre">deleteDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.deleteDict" title="Link to this definition">#</a></dt>
+<dd><p>Удаляет выбранный словарь.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.dict_name_uniq">
+<span class="sig-name descname"><span class="pre">dict_name_uniq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.dict_name_uniq" title="Link to this definition">#</a></dt>
+<dd><p>Генерирует уникальное имя для нового словаря.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Имя словаря.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Уникальное имя словаря.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.getDicts">
+<span class="sig-name descname"><span class="pre">getDicts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.getDicts" title="Link to this definition">#</a></dt>
+<dd><p>Получает список словарей из папки.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Список имен файлов словарей.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.name_selection">
+<span class="sig-name descname"><span class="pre">name_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.name_selection" title="Link to this definition">#</a></dt>
+<dd><p>Генерирует уникальное имя для словаря с учетом уже существующих имен.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Имя словаря.</p></li>
+<li><p><strong>new_name</strong> (<em>str</em>) – Новое имя словаря.</p></li>
+<li><p><strong>counter</strong> (<em>int</em><em>, </em><em>optional</em>) – Счетчик для генерации нового имени. По умолчанию 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Уникальное имя словаря.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.openDict">
+<span class="sig-name descname"><span class="pre">openDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.openDict" title="Link to this definition">#</a></dt>
+<dd><p>Открывает выбранный словарь для игры.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.renameDict">
+<span class="sig-name descname"><span class="pre">renameDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.renameDict" title="Link to this definition">#</a></dt>
+<dd><p>Переименовывает выбранный словарь.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.searchDict">
+<span class="sig-name descname"><span class="pre">searchDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.searchDict" title="Link to this definition">#</a></dt>
+<dd><p>Ищет словарь в списке по введенному запросу.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.selectDict">
+<span class="sig-name descname"><span class="pre">selectDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.selectDict" title="Link to this definition">#</a></dt>
+<dd><p>Выбирает словарь из списка.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item</strong> (<em>QtWidgets.QListWidgetItem</em>) – Элемент списка словарей.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.setDictsList">
+<span class="sig-name descname"><span class="pre">setDictsList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.setDictsList" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает список словарей в боковом меню.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.updateListDicts">
+<span class="sig-name descname"><span class="pre">updateListDicts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.updateListDicts" title="Link to this definition">#</a></dt>
+<dd><p>Обновляет список словарей в боковом меню.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dicts_side_menu.validation">
+<span class="sig-prename descclassname"><span class="pre">dicts_side_menu.</span></span><span class="sig-name descname"><span class="pre">validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.validation" title="Link to this definition">#</a></dt>
+<dd><p>Проверяет строку на наличие содержимого.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>src_string</strong> (<em>str</em>) – Входная строка для проверки.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>True, если строка не пустая, иначе False.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class" id="module-parameters_side_menu">
+<dt class="sig sig-object py" id="parameters_side_menu.ParametersSideMenu">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">parameters_side_menu.</span></span><span class="sig-name descname"><span class="pre">ParametersSideMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parameters_side_menu.ParametersSideMenu" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления боковым меню с параметрами приложения.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>main_win</strong> – Основное окно приложения.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="parameters_side_menu.ParametersSideMenu.changedMode">
+<span class="sig-name descname"><span class="pre">changedMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#parameters_side_menu.ParametersSideMenu.changedMode" title="Link to this definition">#</a></dt>
+<dd><p>Обработчик изменения режима приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="parameters_side_menu.ParametersSideMenu.saveParameters">
+<span class="sig-name descname"><span class="pre">saveParameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#parameters_side_menu.ParametersSideMenu.saveParameters" title="Link to this definition">#</a></dt>
+<dd><p>Сохраняет параметры приложения в конфигурационный файл.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-settings_side_menu">
+<dt class="sig sig-object py" id="settings_side_menu.SettingsSideMenu">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">settings_side_menu.</span></span><span class="sig-name descname"><span class="pre">SettingsSideMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#settings_side_menu.SettingsSideMenu" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления боковым меню настроек.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>main_win</strong> – Основное окно приложения.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="settings_side_menu.SettingsSideMenu.changedTheme">
+<span class="sig-name descname"><span class="pre">changedTheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#settings_side_menu.SettingsSideMenu.changedTheme" title="Link to this definition">#</a></dt>
+<dd><p>Обрабатывает изменение темы приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="settings_side_menu.SettingsSideMenu.saveSettings">
+<span class="sig-name descname"><span class="pre">saveSettings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#settings_side_menu.SettingsSideMenu.saveSettings" title="Link to this definition">#</a></dt>
+<dd><p>Сохраняет настройки приложения в конфигурационный файл.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-edit_dict_panel">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">edit_dict_panel.</span></span><span class="sig-name descname"><span class="pre">EditDictPanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления панелью редактирования словаря.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>main_win</strong> – Основное окно приложения.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.main_win">
+<span class="sig-name descname"><span class="pre">main_win</span></span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.main_win" title="Link to this definition">#</a></dt>
+<dd><p>Основное окно приложения.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.app">
+<span class="sig-name descname"><span class="pre">app</span></span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.app" title="Link to this definition">#</a></dt>
+<dd><p>Объект приложения.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.openEditDictPanelStatus">
+<span class="sig-name descname"><span class="pre">openEditDictPanelStatus</span></span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.openEditDictPanelStatus" title="Link to this definition">#</a></dt>
+<dd><p>Статус открытия панели редактирования словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.addRow">
+<span class="sig-name descname"><span class="pre">addRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.addRow" title="Link to this definition">#</a></dt>
+<dd><p>Добавляет запись в словарь.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.animationEditDictPanel">
+<span class="sig-name descname"><span class="pre">animationEditDictPanel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.animationEditDictPanel" title="Link to this definition">#</a></dt>
+<dd><p>Запускает анимацию открытия/закрытия панели редактирования словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.clickedCell">
+<span class="sig-name descname"><span class="pre">clickedCell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.clickedCell" title="Link to this definition">#</a></dt>
+<dd><p>Обрабатывает клик по ячейке таблицы словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.deleteRow">
+<span class="sig-name descname"><span class="pre">deleteRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.deleteRow" title="Link to this definition">#</a></dt>
+<dd><p>Удаляет выбранную запись из словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.getOpenEditDictPanelStatus">
+<span class="sig-name descname"><span class="pre">getOpenEditDictPanelStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.getOpenEditDictPanelStatus" title="Link to this definition">#</a></dt>
+<dd><p>Возвращает текущий статус открытия панели редактирования словаря.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Статус открытия панели.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.initEditDictPanel">
+<span class="sig-name descname"><span class="pre">initEditDictPanel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.initEditDictPanel" title="Link to this definition">#</a></dt>
+<dd><p>Инициализирует панель редактирования словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.setDictTable">
+<span class="sig-name descname"><span class="pre">setDictTable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.setDictTable" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает таблицу словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.sortWord">
+<span class="sig-name descname"><span class="pre">sortWord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.sortWord" title="Link to this definition">#</a></dt>
+<dd><p>Сортирует слова в словаре.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.updateDictTable">
+<span class="sig-name descname"><span class="pre">updateDictTable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.updateDictTable" title="Link to this definition">#</a></dt>
+<dd><p>Обновляет таблицу словаря.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.updateRow">
+<span class="sig-name descname"><span class="pre">updateRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.updateRow" title="Link to this definition">#</a></dt>
+<dd><p>Обновляет выбранную запись в словаре.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="edit_dict_panel.validation">
+<span class="sig-prename descclassname"><span class="pre">edit_dict_panel.</span></span><span class="sig-name descname"><span class="pre">validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.validation" title="Link to this definition">#</a></dt>
+<dd><p>Проверяет строку на наличие символов.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>src_string</strong> (<em>str</em>) – Исходная строка.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>True, если строка не пустая, False в противном случае.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class" id="module-play_panel">
+<dt class="sig sig-object py" id="play_panel.PlayPanel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">play_panel.</span></span><span class="sig-name descname"><span class="pre">PlayPanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#play_panel.PlayPanel" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления игровой панелью.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>main_win</strong> – Основное окно приложения.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="play_panel.PlayPanel.dictClose">
+<span class="sig-name descname"><span class="pre">dictClose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#play_panel.PlayPanel.dictClose" title="Link to this definition">#</a></dt>
+<dd><p>Закрывает игровую панель и возвращает к предыгровой странице.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="play_panel.PlayPanel.openPage">
+<span class="sig-name descname"><span class="pre">openPage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#play_panel.PlayPanel.openPage" title="Link to this definition">#</a></dt>
+<dd><p>Открывает игровую панель в зависимости от текущего состояния приложения.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-answer_mode">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">answer_mode.</span></span><span class="sig-name descname"><span class="pre">AnswerMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#answer_mode.AnswerMode" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления режимом ответа в приложении.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.main_win">
+<span class="sig-name descname"><span class="pre">main_win</span></span><a class="headerlink" href="#answer_mode.AnswerMode.main_win" title="Link to this definition">#</a></dt>
+<dd><p>Основное окно приложения.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.app">
+<span class="sig-name descname"><span class="pre">app</span></span><a class="headerlink" href="#answer_mode.AnswerMode.app" title="Link to this definition">#</a></dt>
+<dd><p>Экземпляр приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.checkAnswer">
+<span class="sig-name descname"><span class="pre">checkAnswer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#answer_mode.AnswerMode.checkAnswer" title="Link to this definition">#</a></dt>
+<dd><p>Проверка ответа пользователя.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.initAnswerMode">
+<span class="sig-name descname"><span class="pre">initAnswerMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#answer_mode.AnswerMode.initAnswerMode" title="Link to this definition">#</a></dt>
+<dd><p>Инициализация режима ответа.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.nextWord">
+<span class="sig-name descname"><span class="pre">nextWord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#answer_mode.AnswerMode.nextWord" title="Link to this definition">#</a></dt>
+<dd><p>Переход к следующему слову.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.reload">
+<span class="sig-name descname"><span class="pre">reload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#answer_mode.AnswerMode.reload" title="Link to this definition">#</a></dt>
+<dd><p>Перезагрузка режима ответа.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.setInfo">
+<span class="sig-name descname"><span class="pre">setInfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#answer_mode.AnswerMode.setInfo" title="Link to this definition">#</a></dt>
+<dd><p>Установка информации о текущем состоянии режима ответа.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.setWord">
+<span class="sig-name descname"><span class="pre">setWord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#answer_mode.AnswerMode.setWord" title="Link to this definition">#</a></dt>
+<dd><p>Установка слова для отображения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="answer_mode.AnswerMode.shuffleCards">
+<span class="sig-name descname"><span class="pre">shuffleCards</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#answer_mode.AnswerMode.shuffleCards" title="Link to this definition">#</a></dt>
+<dd><p>Перемешивание карточек.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-view_mode">
+<dt class="sig sig-object py" id="view_mode.ViewMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">view_mode.</span></span><span class="sig-name descname"><span class="pre">ViewMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode" title="Link to this definition">#</a></dt>
+<dd><p>Класс для представления режима просмотра карточек.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>main_win</strong> – Основное окно приложения.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="view_mode.ViewMode.initViewMode">
+<span class="sig-name descname"><span class="pre">initViewMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode.initViewMode" title="Link to this definition">#</a></dt>
+<dd><p>Инициализация режима просмотра.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="view_mode.ViewMode.nextWord">
+<span class="sig-name descname"><span class="pre">nextWord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode.nextWord" title="Link to this definition">#</a></dt>
+<dd><p>Переход к следующему слову.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="view_mode.ViewMode.prevWord">
+<span class="sig-name descname"><span class="pre">prevWord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode.prevWord" title="Link to this definition">#</a></dt>
+<dd><p>Переход к предыдущему слову.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="view_mode.ViewMode.reload">
+<span class="sig-name descname"><span class="pre">reload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode.reload" title="Link to this definition">#</a></dt>
+<dd><p>Перезагрузка режима просмотра.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="view_mode.ViewMode.setInfo">
+<span class="sig-name descname"><span class="pre">setInfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode.setInfo" title="Link to this definition">#</a></dt>
+<dd><p>Установка информации о текущем слове и общем количестве слов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="view_mode.ViewMode.setWord">
+<span class="sig-name descname"><span class="pre">setWord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode.setWord" title="Link to this definition">#</a></dt>
+<dd><p>Установка слова для отображения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="view_mode.ViewMode.shuffleCards">
+<span class="sig-name descname"><span class="pre">shuffleCards</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode.shuffleCards" title="Link to this definition">#</a></dt>
+<dd><p>Перемешивание карточек.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="view_mode.ViewMode.translate">
+<span class="sig-name descname"><span class="pre">translate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view_mode.ViewMode.translate" title="Link to this definition">#</a></dt>
+<dd><p>Перевод слова.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-result_window">
+<dt class="sig sig-object py" id="result_window.ResultWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">result_window.</span></span><span class="sig-name descname"><span class="pre">ResultWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">main_win</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#result_window.ResultWindow" title="Link to this definition">#</a></dt>
+<dd><p>Класс для управления окном результатов.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>main_win</strong> – Основное окно приложения.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="result_window.ResultWindow.initResultWindow">
+<span class="sig-name descname"><span class="pre">initResultWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#result_window.ResultWindow.initResultWindow" title="Link to this definition">#</a></dt>
+<dd><p>Инициализация окна результатов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="result_window.ResultWindow.setMistakeTable">
+<span class="sig-name descname"><span class="pre">setMistakeTable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#result_window.ResultWindow.setMistakeTable" title="Link to this definition">#</a></dt>
+<dd><p>Устанавливает таблицу с ошибками.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="предыдущая страница">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">назад</p>
+        <p class="prev-next-title">Документация разработчика Kizana MemoryCards</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Содержание
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller"><code class="docutils literal notranslate"><span class="pre">Controller</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.db_path"><code class="docutils literal notranslate"><span class="pre">Controller.db_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.db_manager"><code class="docutils literal notranslate"><span class="pre">Controller.db_manager</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.table"><code class="docutils literal notranslate"><span class="pre">Controller.table</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.changedRow"><code class="docutils literal notranslate"><span class="pre">Controller.changedRow</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.end"><code class="docutils literal notranslate"><span class="pre">Controller.end</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.result"><code class="docutils literal notranslate"><span class="pre">Controller.result</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.curRowIndex"><code class="docutils literal notranslate"><span class="pre">Controller.curRowIndex</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.mistakesList"><code class="docutils literal notranslate"><span class="pre">Controller.mistakesList</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.user_answer_mistakes"><code class="docutils literal notranslate"><span class="pre">Controller.user_answer_mistakes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.add"><code class="docutils literal notranslate"><span class="pre">Controller.add()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.close"><code class="docutils literal notranslate"><span class="pre">Controller.close()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.delete"><code class="docutils literal notranslate"><span class="pre">Controller.delete()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.geDictTitle"><code class="docutils literal notranslate"><span class="pre">Controller.geDictTitle()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getChangedRow"><code class="docutils literal notranslate"><span class="pre">Controller.getChangedRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getCurIndex"><code class="docutils literal notranslate"><span class="pre">Controller.getCurIndex()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getEnd"><code class="docutils literal notranslate"><span class="pre">Controller.getEnd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getMistakesCounter"><code class="docutils literal notranslate"><span class="pre">Controller.getMistakesCounter()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getMistakesList"><code class="docutils literal notranslate"><span class="pre">Controller.getMistakesList()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getResult"><code class="docutils literal notranslate"><span class="pre">Controller.getResult()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getRow"><code class="docutils literal notranslate"><span class="pre">Controller.getRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getTable"><code class="docutils literal notranslate"><span class="pre">Controller.getTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getTableSize"><code class="docutils literal notranslate"><span class="pre">Controller.getTableSize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.getUserMistakesList"><code class="docutils literal notranslate"><span class="pre">Controller.getUserMistakesList()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.match"><code class="docutils literal notranslate"><span class="pre">Controller.match()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.next"><code class="docutils literal notranslate"><span class="pre">Controller.next()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.prev"><code class="docutils literal notranslate"><span class="pre">Controller.prev()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.reopenDatabase"><code class="docutils literal notranslate"><span class="pre">Controller.reopenDatabase()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.replace"><code class="docutils literal notranslate"><span class="pre">Controller.replace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.reset"><code class="docutils literal notranslate"><span class="pre">Controller.reset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.setChangedRow"><code class="docutils literal notranslate"><span class="pre">Controller.setChangedRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.shuffleCards"><code class="docutils literal notranslate"><span class="pre">Controller.shuffleCards()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.sortTable"><code class="docutils literal notranslate"><span class="pre">Controller.sortTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Controller.Controller.update"><code class="docutils literal notranslate"><span class="pre">Controller.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager"><code class="docutils literal notranslate"><span class="pre">DataBaseManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.db_path"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.db_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.cursor"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.cursor</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.table_name"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.table_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.connection"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.connection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.close"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.close()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.createTable"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.createTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.delete"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.delete()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.executeQuery"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.executeQuery()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.getData"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.getData()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.insert"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.insert()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.setConnection"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.setConnection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#DataBaseManager.DataBaseManager.update"><code class="docutils literal notranslate"><span class="pre">DataBaseManager.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application"><code class="docutils literal notranslate"><span class="pre">Application</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.config_path"><code class="docutils literal notranslate"><span class="pre">Application.config_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.app_settings"><code class="docutils literal notranslate"><span class="pre">Application.app_settings</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.app_info"><code class="docutils literal notranslate"><span class="pre">Application.app_info</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.app_play_parameters"><code class="docutils literal notranslate"><span class="pre">Application.app_play_parameters</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.img_folder_path"><code class="docutils literal notranslate"><span class="pre">Application.img_folder_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.icon_folder_path"><code class="docutils literal notranslate"><span class="pre">Application.icon_folder_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.dicts_folder_path"><code class="docutils literal notranslate"><span class="pre">Application.dicts_folder_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.theme_file_path"><code class="docutils literal notranslate"><span class="pre">Application.theme_file_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.mode"><code class="docutils literal notranslate"><span class="pre">Application.mode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.theme"><code class="docutils literal notranslate"><span class="pre">Application.theme</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.mainWindow"><code class="docutils literal notranslate"><span class="pre">Application.mainWindow</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.controller"><code class="docutils literal notranslate"><span class="pre">Application.controller</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.playSession"><code class="docutils literal notranslate"><span class="pre">Application.playSession</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.MODE"><code class="docutils literal notranslate"><span class="pre">Application.MODE</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.MODE.Answer"><code class="docutils literal notranslate"><span class="pre">Application.MODE.Answer</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.MODE.Test"><code class="docutils literal notranslate"><span class="pre">Application.MODE.Test</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.MODE.View"><code class="docutils literal notranslate"><span class="pre">Application.MODE.View</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.THEME"><code class="docutils literal notranslate"><span class="pre">Application.THEME</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.THEME.DARK"><code class="docutils literal notranslate"><span class="pre">Application.THEME.DARK</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.THEME.LIGHT"><code class="docutils literal notranslate"><span class="pre">Application.THEME.LIGHT</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.configApplication"><code class="docutils literal notranslate"><span class="pre">Application.configApplication()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getAppInfo"><code class="docutils literal notranslate"><span class="pre">Application.getAppInfo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getAppPlayParameters"><code class="docutils literal notranslate"><span class="pre">Application.getAppPlayParameters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getAppSettings"><code class="docutils literal notranslate"><span class="pre">Application.getAppSettings()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getConfigPath"><code class="docutils literal notranslate"><span class="pre">Application.getConfigPath()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getController"><code class="docutils literal notranslate"><span class="pre">Application.getController()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getDictsFolder"><code class="docutils literal notranslate"><span class="pre">Application.getDictsFolder()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getIconFolder"><code class="docutils literal notranslate"><span class="pre">Application.getIconFolder()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getMode"><code class="docutils literal notranslate"><span class="pre">Application.getMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getPlaySession"><code class="docutils literal notranslate"><span class="pre">Application.getPlaySession()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getTheme"><code class="docutils literal notranslate"><span class="pre">Application.getTheme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.getThemeFiles"><code class="docutils literal notranslate"><span class="pre">Application.getThemeFiles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.openMainWindow"><code class="docutils literal notranslate"><span class="pre">Application.openMainWindow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.setController"><code class="docutils literal notranslate"><span class="pre">Application.setController()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.setMode"><code class="docutils literal notranslate"><span class="pre">Application.setMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.setPlaySession"><code class="docutils literal notranslate"><span class="pre">Application.setPlaySession()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application.Application.setTheme"><code class="docutils literal notranslate"><span class="pre">Application.setTheme()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow"><code class="docutils literal notranslate"><span class="pre">MainWindow</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.app"><code class="docutils literal notranslate"><span class="pre">MainWindow.app</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.sideMenu"><code class="docutils literal notranslate"><span class="pre">MainWindow.sideMenu</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.playPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.playPanel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.editDictPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.editDictPanel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.buildEditDictPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.buildEditDictPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.buildPlayPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.buildPlayPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.buildSideMenu"><code class="docutils literal notranslate"><span class="pre">MainWindow.buildSideMenu()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.getApplication"><code class="docutils literal notranslate"><span class="pre">MainWindow.getApplication()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.getEditDictPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.getEditDictPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.getPlayPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.getPlayPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.load_icon"><code class="docutils literal notranslate"><span class="pre">MainWindow.load_icon()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.load_style"><code class="docutils literal notranslate"><span class="pre">MainWindow.load_style()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setAppInfo"><code class="docutils literal notranslate"><span class="pre">MainWindow.setAppInfo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setPlayPanel"><code class="docutils literal notranslate"><span class="pre">MainWindow.setPlayPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setPlayParameters"><code class="docutils literal notranslate"><span class="pre">MainWindow.setPlayParameters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setSettings"><code class="docutils literal notranslate"><span class="pre">MainWindow.setSettings()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.setUiTheme"><code class="docutils literal notranslate"><span class="pre">MainWindow.setUiTheme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main_window.MainWindow.svg_change_color"><code class="docutils literal notranslate"><span class="pre">MainWindow.svg_change_color()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu"><code class="docutils literal notranslate"><span class="pre">SideMenu</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.actionMenuItem"><code class="docutils literal notranslate"><span class="pre">SideMenu.actionMenuItem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.animationSideMenu"><code class="docutils literal notranslate"><span class="pre">SideMenu.animationSideMenu()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.fillListMenuItem"><code class="docutils literal notranslate"><span class="pre">SideMenu.fillListMenuItem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.initSideMenu"><code class="docutils literal notranslate"><span class="pre">SideMenu.initSideMenu()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.menu_item"><code class="docutils literal notranslate"><span class="pre">SideMenu.menu_item()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side_menu.SideMenu.offMenuItems"><code class="docutils literal notranslate"><span class="pre">SideMenu.offMenuItems()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.main_win"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.main_win</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.selectedDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.selectedDict</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.dicts"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.dicts</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.dicts_folder_path"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.dicts_folder_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.addElement"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.addElement()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.copyDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.copyDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.createDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.createDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.deleteDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.deleteDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.dict_name_uniq"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.dict_name_uniq()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.getDicts"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.getDicts()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.name_selection"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.name_selection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.openDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.openDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.renameDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.renameDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.searchDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.searchDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.selectDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.selectDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.setDictsList"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.setDictsList()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.updateListDicts"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.updateListDicts()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.validation"><code class="docutils literal notranslate"><span class="pre">validation()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu.changedMode"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu.changedMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu.saveParameters"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu.saveParameters()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings_side_menu.SettingsSideMenu"><code class="docutils literal notranslate"><span class="pre">SettingsSideMenu</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings_side_menu.SettingsSideMenu.changedTheme"><code class="docutils literal notranslate"><span class="pre">SettingsSideMenu.changedTheme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings_side_menu.SettingsSideMenu.saveSettings"><code class="docutils literal notranslate"><span class="pre">SettingsSideMenu.saveSettings()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel"><code class="docutils literal notranslate"><span class="pre">EditDictPanel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.main_win"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.main_win</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.app"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.app</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.openEditDictPanelStatus"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.openEditDictPanelStatus</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.addRow"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.addRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.animationEditDictPanel"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.animationEditDictPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.clickedCell"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.clickedCell()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.deleteRow"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.deleteRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.getOpenEditDictPanelStatus"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.getOpenEditDictPanelStatus()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.initEditDictPanel"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.initEditDictPanel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.setDictTable"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.setDictTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.sortWord"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.sortWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.updateDictTable"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.updateDictTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.updateRow"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.updateRow()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.validation"><code class="docutils literal notranslate"><span class="pre">validation()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel"><code class="docutils literal notranslate"><span class="pre">PlayPanel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel.dictClose"><code class="docutils literal notranslate"><span class="pre">PlayPanel.dictClose()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel.openPage"><code class="docutils literal notranslate"><span class="pre">PlayPanel.openPage()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode"><code class="docutils literal notranslate"><span class="pre">AnswerMode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.main_win"><code class="docutils literal notranslate"><span class="pre">AnswerMode.main_win</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.app"><code class="docutils literal notranslate"><span class="pre">AnswerMode.app</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.checkAnswer"><code class="docutils literal notranslate"><span class="pre">AnswerMode.checkAnswer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.initAnswerMode"><code class="docutils literal notranslate"><span class="pre">AnswerMode.initAnswerMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.nextWord"><code class="docutils literal notranslate"><span class="pre">AnswerMode.nextWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.reload"><code class="docutils literal notranslate"><span class="pre">AnswerMode.reload()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.setInfo"><code class="docutils literal notranslate"><span class="pre">AnswerMode.setInfo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.setWord"><code class="docutils literal notranslate"><span class="pre">AnswerMode.setWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answer_mode.AnswerMode.shuffleCards"><code class="docutils literal notranslate"><span class="pre">AnswerMode.shuffleCards()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode"><code class="docutils literal notranslate"><span class="pre">ViewMode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.initViewMode"><code class="docutils literal notranslate"><span class="pre">ViewMode.initViewMode()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.nextWord"><code class="docutils literal notranslate"><span class="pre">ViewMode.nextWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.prevWord"><code class="docutils literal notranslate"><span class="pre">ViewMode.prevWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.reload"><code class="docutils literal notranslate"><span class="pre">ViewMode.reload()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.setInfo"><code class="docutils literal notranslate"><span class="pre">ViewMode.setInfo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.setWord"><code class="docutils literal notranslate"><span class="pre">ViewMode.setWord()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.shuffleCards"><code class="docutils literal notranslate"><span class="pre">ViewMode.shuffleCards()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view_mode.ViewMode.translate"><code class="docutils literal notranslate"><span class="pre">ViewMode.translate()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result_window.ResultWindow"><code class="docutils literal notranslate"><span class="pre">ResultWindow</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result_window.ResultWindow.initResultWindow"><code class="docutils literal notranslate"><span class="pre">ResultWindow.initResultWindow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result_window.ResultWindow.setMistakeTable"><code class="docutils literal notranslate"><span class="pre">ResultWindow.setMistakeTable()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+По nnovi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Копирайт 2024, Kizana MemoryCards.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,987 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ru" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Алфавитный указатель &#8212; документация Kizana MemoryCards 2.1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=0abb3722"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/translations.js?v=29b1f277"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <link rel="index" title="Алфавитный указатель" href="#" />
+    <link rel="search" title="Поиск" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ru"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Перейти к основному содержанию</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">документация Kizana MemoryCards 2.1</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Поиск" aria-label="Поиск" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Поиск</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Модули</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Полноэкранный режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="светлая/темная" aria-label="светлая/темная" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Поиск" aria-label="Поиск" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Алфавитный указатель</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#side_menu.SideMenu.actionMenuItem">actionMenuItem() (метод side_menu.SideMenu)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.add">add() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.addElement">addElement() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.addRow">addRow() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.animationEditDictPanel">animationEditDictPanel() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#side_menu.SideMenu.animationSideMenu">animationSideMenu() (метод side_menu.SideMenu)</a>
+</li>
+      <li><a href="modules.html#application.Application.MODE.Answer">Answer (атрибут application.Application.MODE)</a>
+</li>
+      <li>
+    answer_mode
+
+      <ul>
+        <li><a href="modules.html#module-answer_mode">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#answer_mode.AnswerMode">AnswerMode (класс в answer_mode)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#answer_mode.AnswerMode.app">app (атрибут answer_mode.AnswerMode)</a>
+
+      <ul>
+        <li><a href="modules.html#edit_dict_panel.EditDictPanel.app">(атрибут edit_dict_panel.EditDictPanel)</a>
+</li>
+        <li><a href="modules.html#main_window.MainWindow.app">(атрибут main_window.MainWindow)</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#application.Application.app_info">app_info (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#application.Application.app_play_parameters">app_play_parameters (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#application.Application.app_settings">app_settings (атрибут application.Application)</a>
+</li>
+      <li>
+    application
+
+      <ul>
+        <li><a href="modules.html#module-application">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#application.Application">Application (класс в application)</a>
+</li>
+      <li><a href="modules.html#application.Application.MODE">Application.MODE (класс в application)</a>
+</li>
+      <li><a href="modules.html#application.Application.THEME">Application.THEME (класс в application)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#main_window.MainWindow.buildEditDictPanel">buildEditDictPanel() (метод main_window.MainWindow)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#main_window.MainWindow.buildPlayPanel">buildPlayPanel() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.buildSideMenu">buildSideMenu() (метод main_window.MainWindow)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#parameters_side_menu.ParametersSideMenu.changedMode">changedMode() (метод parameters_side_menu.ParametersSideMenu)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.changedRow">changedRow (атрибут Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#settings_side_menu.SettingsSideMenu.changedTheme">changedTheme() (метод settings_side_menu.SettingsSideMenu)</a>
+</li>
+      <li><a href="modules.html#answer_mode.AnswerMode.checkAnswer">checkAnswer() (метод answer_mode.AnswerMode)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.clickedCell">clickedCell() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.close">close() (метод Controller.Controller)</a>
+
+      <ul>
+        <li><a href="modules.html#DataBaseManager.DataBaseManager.close">(метод DataBaseManager.DataBaseManager)</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#application.Application.config_path">config_path (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#application.Application.configApplication">configApplication() (метод application.Application)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager.connection">connection (атрибут DataBaseManager.DataBaseManager)</a>
+</li>
+      <li>
+    Controller
+
+      <ul>
+        <li><a href="modules.html#module-Controller">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#application.Application.controller">controller (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller">Controller (класс в Controller)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.copyDict">copyDict() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.createDict">createDict() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager.createTable">createTable() (метод DataBaseManager.DataBaseManager)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.curRowIndex">curRowIndex (атрибут Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager.cursor">cursor (атрибут DataBaseManager.DataBaseManager)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#application.Application.THEME.DARK">DARK (атрибут application.Application.THEME)</a>
+</li>
+      <li>
+    DataBaseManager
+
+      <ul>
+        <li><a href="modules.html#module-DataBaseManager">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager">DataBaseManager (класс в DataBaseManager)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.db_manager">db_manager (атрибут Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.db_path">db_path (атрибут Controller.Controller)</a>
+
+      <ul>
+        <li><a href="modules.html#DataBaseManager.DataBaseManager.db_path">(атрибут DataBaseManager.DataBaseManager)</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#Controller.Controller.delete">delete() (метод Controller.Controller)</a>
+
+      <ul>
+        <li><a href="modules.html#DataBaseManager.DataBaseManager.delete">(метод DataBaseManager.DataBaseManager)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.deleteDict">deleteDict() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.deleteRow">deleteRow() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.dict_name_uniq">dict_name_uniq() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#play_panel.PlayPanel.dictClose">dictClose() (метод play_panel.PlayPanel)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.dicts">dicts (атрибут dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#application.Application.dicts_folder_path">dicts_folder_path (атрибут application.Application)</a>
+
+      <ul>
+        <li><a href="modules.html#dicts_side_menu.DictsSideMenu.dicts_folder_path">(атрибут dicts_side_menu.DictsSideMenu)</a>
+</li>
+      </ul></li>
+      <li>
+    dicts_side_menu
+
+      <ul>
+        <li><a href="modules.html#module-dicts_side_menu">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu">DictsSideMenu (класс в dicts_side_menu)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    edit_dict_panel
+
+      <ul>
+        <li><a href="modules.html#module-edit_dict_panel">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#main_window.MainWindow.editDictPanel">editDictPanel (атрибут main_window.MainWindow)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel">EditDictPanel (класс в edit_dict_panel)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.end">end (атрибут Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager.executeQuery">executeQuery() (метод DataBaseManager.DataBaseManager)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#side_menu.SideMenu.fillListMenuItem">fillListMenuItem() (метод side_menu.SideMenu)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#Controller.Controller.geDictTitle">geDictTitle() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#application.Application.getAppInfo">getAppInfo() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.getApplication">getApplication() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#application.Application.getAppPlayParameters">getAppPlayParameters() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#application.Application.getAppSettings">getAppSettings() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getChangedRow">getChangedRow() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#application.Application.getConfigPath">getConfigPath() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#application.Application.getController">getController() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getCurIndex">getCurIndex() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager.getData">getData() (метод DataBaseManager.DataBaseManager)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.getDicts">getDicts() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#application.Application.getDictsFolder">getDictsFolder() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.getEditDictPanel">getEditDictPanel() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getEnd">getEnd() (метод Controller.Controller)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#application.Application.getIconFolder">getIconFolder() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getMistakesCounter">getMistakesCounter() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getMistakesList">getMistakesList() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#application.Application.getMode">getMode() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.getOpenEditDictPanelStatus">getOpenEditDictPanelStatus() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.getPlayPanel">getPlayPanel() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#application.Application.getPlaySession">getPlaySession() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getResult">getResult() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getRow">getRow() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getTable">getTable() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getTableSize">getTableSize() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#application.Application.getTheme">getTheme() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#application.Application.getThemeFiles">getThemeFiles() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.getUserMistakesList">getUserMistakesList() (метод Controller.Controller)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#application.Application.icon_folder_path">icon_folder_path (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#application.Application.img_folder_path">img_folder_path (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#answer_mode.AnswerMode.initAnswerMode">initAnswerMode() (метод answer_mode.AnswerMode)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.initEditDictPanel">initEditDictPanel() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#result_window.ResultWindow.initResultWindow">initResultWindow() (метод result_window.ResultWindow)</a>
+</li>
+      <li><a href="modules.html#side_menu.SideMenu.initSideMenu">initSideMenu() (метод side_menu.SideMenu)</a>
+</li>
+      <li><a href="modules.html#view_mode.ViewMode.initViewMode">initViewMode() (метод view_mode.ViewMode)</a>
+</li>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager.insert">insert() (метод DataBaseManager.DataBaseManager)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#application.Application.THEME.LIGHT">LIGHT (атрибут application.Application.THEME)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#main_window.MainWindow.load_icon">load_icon() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.load_style">load_style() (метод main_window.MainWindow)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#answer_mode.AnswerMode.main_win">main_win (атрибут answer_mode.AnswerMode)</a>
+
+      <ul>
+        <li><a href="modules.html#dicts_side_menu.DictsSideMenu.main_win">(атрибут dicts_side_menu.DictsSideMenu)</a>
+</li>
+        <li><a href="modules.html#edit_dict_panel.EditDictPanel.main_win">(атрибут edit_dict_panel.EditDictPanel)</a>
+</li>
+      </ul></li>
+      <li>
+    main_window
+
+      <ul>
+        <li><a href="modules.html#module-main_window">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#application.Application.mainWindow">mainWindow (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow">MainWindow (класс в main_window)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.match">match() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#side_menu.SideMenu.menu_item">menu_item() (метод side_menu.SideMenu)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.mistakesList">mistakesList (атрибут Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#application.Application.mode">mode (атрибут application.Application)</a>
+</li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="modules.html#module-answer_mode">answer_mode</a>
+</li>
+        <li><a href="modules.html#module-application">application</a>
+</li>
+        <li><a href="modules.html#module-Controller">Controller</a>
+</li>
+        <li><a href="modules.html#module-DataBaseManager">DataBaseManager</a>
+</li>
+        <li><a href="modules.html#module-dicts_side_menu">dicts_side_menu</a>
+</li>
+        <li><a href="modules.html#module-edit_dict_panel">edit_dict_panel</a>
+</li>
+        <li><a href="modules.html#module-main_window">main_window</a>
+</li>
+        <li><a href="modules.html#module-parameters_side_menu">parameters_side_menu</a>
+</li>
+        <li><a href="modules.html#module-play_panel">play_panel</a>
+</li>
+        <li><a href="modules.html#module-result_window">result_window</a>
+</li>
+        <li><a href="modules.html#module-settings_side_menu">settings_side_menu</a>
+</li>
+        <li><a href="modules.html#module-side_menu">side_menu</a>
+</li>
+        <li><a href="modules.html#module-view_mode">view_mode</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.name_selection">name_selection() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.next">next() (метод Controller.Controller)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#answer_mode.AnswerMode.nextWord">nextWord() (метод answer_mode.AnswerMode)</a>
+
+      <ul>
+        <li><a href="modules.html#view_mode.ViewMode.nextWord">(метод view_mode.ViewMode)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#side_menu.SideMenu.offMenuItems">offMenuItems() (метод side_menu.SideMenu)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.openDict">openDict() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.openEditDictPanelStatus">openEditDictPanelStatus (атрибут edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#application.Application.openMainWindow">openMainWindow() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#play_panel.PlayPanel.openPage">openPage() (метод play_panel.PlayPanel)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    parameters_side_menu
+
+      <ul>
+        <li><a href="modules.html#module-parameters_side_menu">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#parameters_side_menu.ParametersSideMenu">ParametersSideMenu (класс в parameters_side_menu)</a>
+</li>
+      <li>
+    play_panel
+
+      <ul>
+        <li><a href="modules.html#module-play_panel">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#main_window.MainWindow.playPanel">playPanel (атрибут main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#play_panel.PlayPanel">PlayPanel (класс в play_panel)</a>
+</li>
+      <li><a href="modules.html#application.Application.playSession">playSession (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.prev">prev() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#view_mode.ViewMode.prevWord">prevWord() (метод view_mode.ViewMode)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#answer_mode.AnswerMode.reload">reload() (метод answer_mode.AnswerMode)</a>
+
+      <ul>
+        <li><a href="modules.html#view_mode.ViewMode.reload">(метод view_mode.ViewMode)</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.renameDict">renameDict() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.reopenDatabase">reopenDatabase() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.replace">replace() (метод Controller.Controller)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#Controller.Controller.reset">reset() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.result">result (атрибут Controller.Controller)</a>
+</li>
+      <li>
+    result_window
+
+      <ul>
+        <li><a href="modules.html#module-result_window">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#result_window.ResultWindow">ResultWindow (класс в result_window)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#parameters_side_menu.ParametersSideMenu.saveParameters">saveParameters() (метод parameters_side_menu.ParametersSideMenu)</a>
+</li>
+      <li><a href="modules.html#settings_side_menu.SettingsSideMenu.saveSettings">saveSettings() (метод settings_side_menu.SettingsSideMenu)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.searchDict">searchDict() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.selectDict">selectDict() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.selectedDict">selectedDict (атрибут dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.setAppInfo">setAppInfo() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.setChangedRow">setChangedRow() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager.setConnection">setConnection() (метод DataBaseManager.DataBaseManager)</a>
+</li>
+      <li><a href="modules.html#application.Application.setController">setController() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.setDictsList">setDictsList() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.setDictTable">setDictTable() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#answer_mode.AnswerMode.setInfo">setInfo() (метод answer_mode.AnswerMode)</a>
+
+      <ul>
+        <li><a href="modules.html#view_mode.ViewMode.setInfo">(метод view_mode.ViewMode)</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#result_window.ResultWindow.setMistakeTable">setMistakeTable() (метод result_window.ResultWindow)</a>
+</li>
+      <li><a href="modules.html#application.Application.setMode">setMode() (метод application.Application)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.setPlayPanel">setPlayPanel() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.setPlayParameters">setPlayParameters() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#application.Application.setPlaySession">setPlaySession() (метод application.Application)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#main_window.MainWindow.setSettings">setSettings() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#application.Application.setTheme">setTheme() (метод application.Application)</a>
+</li>
+      <li>
+    settings_side_menu
+
+      <ul>
+        <li><a href="modules.html#module-settings_side_menu">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#settings_side_menu.SettingsSideMenu">SettingsSideMenu (класс в settings_side_menu)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.setUiTheme">setUiTheme() (метод main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#answer_mode.AnswerMode.setWord">setWord() (метод answer_mode.AnswerMode)</a>
+
+      <ul>
+        <li><a href="modules.html#view_mode.ViewMode.setWord">(метод view_mode.ViewMode)</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#answer_mode.AnswerMode.shuffleCards">shuffleCards() (метод answer_mode.AnswerMode)</a>
+
+      <ul>
+        <li><a href="modules.html#Controller.Controller.shuffleCards">(метод Controller.Controller)</a>
+</li>
+        <li><a href="modules.html#view_mode.ViewMode.shuffleCards">(метод view_mode.ViewMode)</a>
+</li>
+      </ul></li>
+      <li>
+    side_menu
+
+      <ul>
+        <li><a href="modules.html#module-side_menu">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#main_window.MainWindow.sideMenu">sideMenu (атрибут main_window.MainWindow)</a>
+</li>
+      <li><a href="modules.html#side_menu.SideMenu">SideMenu (класс в side_menu)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.sortTable">sortTable() (метод Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.sortWord">sortWord() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#main_window.MainWindow.svg_change_color">svg_change_color() (метод main_window.MainWindow)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#Controller.Controller.table">table (атрибут Controller.Controller)</a>
+</li>
+      <li><a href="modules.html#DataBaseManager.DataBaseManager.table_name">table_name (атрибут DataBaseManager.DataBaseManager)</a>
+</li>
+      <li><a href="modules.html#application.Application.MODE.Test">Test (атрибут application.Application.MODE)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#application.Application.theme">theme (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#application.Application.theme_file_path">theme_file_path (атрибут application.Application)</a>
+</li>
+      <li><a href="modules.html#view_mode.ViewMode.translate">translate() (метод view_mode.ViewMode)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#Controller.Controller.update">update() (метод Controller.Controller)</a>
+
+      <ul>
+        <li><a href="modules.html#DataBaseManager.DataBaseManager.update">(метод DataBaseManager.DataBaseManager)</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.updateDictTable">updateDictTable() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#dicts_side_menu.DictsSideMenu.updateListDicts">updateListDicts() (метод dicts_side_menu.DictsSideMenu)</a>
+</li>
+      <li><a href="modules.html#edit_dict_panel.EditDictPanel.updateRow">updateRow() (метод edit_dict_panel.EditDictPanel)</a>
+</li>
+      <li><a href="modules.html#Controller.Controller.user_answer_mistakes">user_answer_mistakes (атрибут Controller.Controller)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="modules.html#dicts_side_menu.validation">validation() (в модуле dicts_side_menu)</a>
+
+      <ul>
+        <li><a href="modules.html#edit_dict_panel.validation">(в модуле edit_dict_panel)</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#application.Application.MODE.View">View (атрибут application.Application.MODE)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    view_mode
+
+      <ul>
+        <li><a href="modules.html#module-view_mode">module</a>
+</li>
+      </ul></li>
+      <li><a href="modules.html#view_mode.ViewMode">ViewMode (класс в view_mode)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+По nnovi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Копирайт 2024, Kizana MemoryCards.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
