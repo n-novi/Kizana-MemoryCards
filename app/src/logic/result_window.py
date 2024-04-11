@@ -3,7 +3,20 @@ from app.src.ui.result_interface_ui import Ui_Dialog
 
 
 class ResultWindow(QtWidgets.QDialog, Ui_Dialog):
+    """
+    Класс для управления окном результатов.
+
+    Args:
+        main_win: Основное окно приложения.
+    """
+
     def __init__(self, main_win):
+        """
+        Инициализация объекта класса ResultWindow.
+
+        Args:
+            main_win: Основное окно приложения.
+        """
         super().__init__()
         self.setupUi(self)
         self.main_win = main_win
@@ -13,6 +26,9 @@ class ResultWindow(QtWidgets.QDialog, Ui_Dialog):
         self.initResultWindow()
 
     def initResultWindow(self):
+        """
+        Инициализация окна результатов.
+        """
         self.setMistakeTable()
         self.mistakeCounter.setText(
             "Ошибок: " + str(self.app.getController().getMistakesCounter()))
@@ -23,15 +39,17 @@ class ResultWindow(QtWidgets.QDialog, Ui_Dialog):
             self.moreInfoPanel.setMaximumHeight(0)
 
     def setMistakeTable(self):
+        """
+        Устанавливает таблицу с ошибками.
+        """
         mistakes_list = self.app.getController().getMistakesList()
         user_answer_mistakes = self.app.getController().getUserMistakesList()
 
         self.mistakesTable.setColumnCount(3)
         self.mistakesTable.setRowCount(len(mistakes_list))
 
-        self.mistakesTable.horizontalHeader().setSectionResizeMode(0, QtWidgets.QHeaderView.ResizeMode.Stretch)
-        self.mistakesTable.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeMode.Stretch)
-        self.mistakesTable.horizontalHeader().setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeMode.Stretch)
+        self.mistakesTable.horizontalHeader().setSectionResizeMode(
+            QtWidgets.QHeaderView.ResizeMode.Stretch)
         self.mistakesTable.setHorizontalHeaderLabels(["Слово", "Значение", "Ваш ответ"])
 
         for i in range(len(mistakes_list)):

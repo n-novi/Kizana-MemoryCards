@@ -4,7 +4,20 @@ from app.src.logic.view_mode import ViewMode
 
 
 class PlayPanel:
+    """
+    Класс для управления игровой панелью.
+
+    Args:
+        main_win: Основное окно приложения.
+    """
+
     def __init__(self, main_win):
+        """
+        Инициализация объекта класса PlayPanel.
+
+        Args:
+            main_win: Основное окно приложения.
+        """
         self.main_win = main_win
         self.app = self.main_win.getApplication()
 
@@ -15,8 +28,11 @@ class PlayPanel:
         self.main_win.closeBtn.clicked.connect(self.dictClose)
 
     def openPage(self):
+        """
+        Открывает игровую панель в зависимости от текущего состояния приложения.
+        """
         if self.app.getPlaySession() is True:
-            #  выбор режима игры
+            # Выбор режима игры
             self.main_win.getEditDictPanel().updateDictTable()
             self.main_win.dictTitle.setText(self.app.getController().geDictTitle())
             self.main_win.playMode.setText(self.main_win.modeComboBox.currentText())
@@ -39,7 +55,7 @@ class PlayPanel:
                 elif mode == self.app.MODE.Test:
                     pass
         else:
-            #  выбор предыгровой страницы
+            # Выбор предигровой страницы
             self.main_win.statusBar.setHidden(True)
             if self.main_win.listDicts.count() == 0:
                 self.main_win.stackedWidgetMode.setCurrentIndex(1)
@@ -47,6 +63,9 @@ class PlayPanel:
                 self.main_win.stackedWidgetMode.setCurrentIndex(2)
 
     def dictClose(self):
+        """
+        Закрывает игровую панель и возвращает к предыгровой странице.
+        """
         self.app.setPlaySession(False)
         if self.main_win.getEditDictPanel().getOpenEditDictPanelStatus():
             self.main_win.getEditDictPanel().animationEditDictPanel()

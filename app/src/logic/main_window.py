@@ -8,7 +8,22 @@ from app.src.logic.edit_dict_panel import EditDictPanel
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+    """
+    Главное окно приложения.
+
+    Attributes:
+        app: Объект приложения.
+        sideMenu: Панель бокового меню.
+        playPanel: Панель воспроизведения словаря.
+        editDictPanel: Панель редактирования словаря.
+    """
     def __init__(self, app):
+        """
+        Инициализация главного окна приложения.
+
+        Args:
+            app: Объект приложения.
+        """
         QtWidgets.QMainWindow.__init__(self)
         self.app = app
         self.setupUi(self)
@@ -27,8 +42,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.buildEditDictPanel()
 
     def setAppInfo(self):
+        """
+        Устанавливает информацию о приложении в главном окне.
+        """
         app_info = self.app.getAppInfo()
-
         self.setWindowTitle(app_info["app_title"])
         self.labelCompany.setText(app_info["app_company"])
         self.labelVersion.setText(app_info["app_version"])
@@ -42,12 +59,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.listViewAuthors.setModel(model_1)
         self.listViewAuthors.setSelectionMode(QtWidgets.QListView.SelectionMode.NoSelection)
 
-        # developers = [dev for dev in app_info["developer"]]
-        # model_2 = QtCore.QStringListModel(self)
-        # model_2.setStringList(developers)
-        # self.listViewDevelopers.setModel(model_2)
-
     def setPlayParameters(self):
+        """
+        Устанавливает параметры воспроизведения приложения.
+        """
         parameter = self.app.getAppPlayParameters()
         for i in range(len(self.app.MODE)):
             if parameter["mode"] == i:
@@ -55,28 +70,64 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.modeComboBox.setCurrentIndex(i)
 
     def buildSideMenu(self):
+        """
+        Создает панель бокового меню.
+        """
         self.sideMenu = SideMenu(self)
 
     def buildPlayPanel(self):
+        """
+        Создает панель воспроизведения словаря.
+        """
         self.playPanel = PlayPanel(self)
 
     def buildEditDictPanel(self):
+        """
+        Создает панель редактирования словаря.
+        """
         self.editDictPanel = EditDictPanel(self)
 
     def setPlayPanel(self, playPanel):
+        """
+        Устанавливает панель воспроизведения словаря.
+
+        Args:
+            playPanel: Панель воспроизведения словаря.
+        """
         if isinstance(playPanel, PlayPanel):
             self.playPanel = playPanel
 
     def getPlayPanel(self):
+        """
+        Получает панель воспроизведения словаря.
+
+        Returns:
+            PlayPanel: Панель воспроизведения словаря.
+        """
         return self.playPanel
 
     def getEditDictPanel(self):
+        """
+        Получает панель редактирования словаря.
+
+        Returns:
+            EditDictPanel: Панель редактирования словаря.
+        """
         return self.editDictPanel
 
     def getApplication(self):
+        """
+        Получает объект приложения.
+
+        Returns:
+            Application: Объект приложения.
+        """
         return self.app
 
     def setSettings(self):
+        """
+        Устанавливает настройки приложения.
+        """
         app_settings = self.app.getAppSettings()
         if app_settings["theme"] == "light":
             self.app.setTheme(self.app.THEME.LIGHT)
@@ -86,6 +137,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.themeComboBox.setCurrentIndex(1)
 
     def load_icon(self):
+        """
+        Загружает иконки для элементов интерфейса из файлов.
+        """
         icon_path = self.app.getIconFolder()
         QtCore.QDir.addSearchPath("icons", icon_path)
 
@@ -189,12 +243,24 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.nextAnswerModeBtn.setIconSize(QtCore.QSize(64, 64))
 
     def load_style(self, style_file):
+        """
+        Загружает стили интерфейса из файла.
+
+        Args:
+            style_file (str): Путь к файлу стилей.
+        """
         f = open(style_file, 'r')
         styles = f.read()
         self.app.setStyleSheet(styles)
         f.close()
 
     def svg_change_color(self, color):
+        """
+        Меняет цвет SVG-иконок.
+
+        Args:
+            color (str): Цвет в формате RGB.
+        """
         folder = self.app.getIconFolder()
         for file in os.listdir(folder):
             if os.path.isfile(os.path.join(folder, file)) and file.endswith('.svg'):
@@ -207,6 +273,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     svg_icon.write(svg_text)
 
     def setUiTheme(self):
+        """
+        Устанавливает тему интерфейса приложения.
+        """
         theme = self.app.getTheme()
         theme_files = self.app.getThemeFiles()
         if theme == self.app.THEME.LIGHT:
@@ -217,3 +286,4 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.svg_change_color("#d5d5d5")
             self.load_icon()
             self.load_style(theme_files["dark"])
+

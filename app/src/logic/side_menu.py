@@ -5,7 +5,20 @@ from app.src.logic.settings_side_menu import SettingsSideMenu
 
 
 class SideMenu:
+    """
+    Класс для управления боковым меню приложения.
+
+    Args:
+        main_win: Основное окно приложения.
+    """
+
     def __init__(self, main_win):
+        """
+        Инициализация объекта класса SideMenu.
+
+        Args:
+            main_win: Основное окно приложения.
+        """
         self.main_win = main_win
 
         self.dictSideMenu = None
@@ -26,7 +39,10 @@ class SideMenu:
         self.main_win.helpBtn.clicked.connect(lambda: self.menu_item(self.main_win.helpBtn, 4))
 
     def initSideMenu(self):
-        if self.openSideMenuStatus is False:
+        """
+        Инициализация бокового меню.
+        """
+        if not self.openSideMenuStatus:
             self.main_win.frameSubMenu.setMaximumWidth(0)
             self.main_win.dictsBtn.setChecked(False)
         else:
@@ -36,13 +52,22 @@ class SideMenu:
             self.dictSideMenu = DictsSideMenu(self.main_win)
 
     def fillListMenuItem(self):
+        """
+        Заполнение списка элементов (кнопок) меню.
+        """
         self.listMenuItem.append(self.main_win.dictsBtn)
         self.listMenuItem.append(self.main_win.parBtn)
         self.listMenuItem.append(self.main_win.settingsBtn)
         self.listMenuItem.append(self.main_win.infoBtn)
         self.listMenuItem.append(self.main_win.helpBtn)
 
-    def offMenuItems(self, itemOn):  # выключение всех элементов меню кроме одного
+    def offMenuItems(self, itemOn):
+        """
+        Выключение всех элементов меню кроме одного.
+
+        Args:
+            itemOn: Элемент меню, который нужно оставить включенным.
+        """
         for item in self.listMenuItem:
             if isinstance(item, QtWidgets.QPushButton):
                 if item != itemOn:
@@ -51,6 +76,12 @@ class SideMenu:
                     item.setChecked(True)
 
     def actionMenuItem(self, button):
+        """
+        Выполнение действия для выбранного элемента меню.
+
+        Args:
+            button: Выбранный элемент меню.
+        """
         if button == self.main_win.dictsBtn:
             self.dictSideMenu = DictsSideMenu(self.main_win)
         if button == self.main_win.parBtn:
@@ -58,24 +89,33 @@ class SideMenu:
         if button == self.main_win.settingsBtn:
             self.settingsSideMenu = SettingsSideMenu(self.main_win)
 
-    # Переключение пунктов меню
     def menu_item(self, button, page):
-        if isinstance(button, QtWidgets.QPushButton) is False:
+        """
+        Переключение пунктов меню.
+
+        Args:
+            button: Выбранный элемент меню.
+            page: Номер страницы для переключения.
+        """
+        if not isinstance(button, QtWidgets.QPushButton):
             return
 
         if button.isChecked():
             self.main_win.stackedWidgetMenu.setCurrentIndex(page)
             self.actionMenuItem(button)
             self.offMenuItems(button)
-            if self.openSideMenuStatus is False:
+            if not self.openSideMenuStatus:
                 self.animationSideMenu()
         else:
             button.setChecked(True)
-            if self.openSideMenuStatus is True:
+            if self.openSideMenuStatus:
                 self.animationSideMenu()
                 button.setChecked(False)
 
     def animationSideMenu(self):
+        """
+        Анимация открытия и закрытия бокового меню.
+        """
         if not self.openSideMenuStatus:
             self.animation_1 = QtCore.QPropertyAnimation(self.main_win.frameSubMenu, b"maximumWidth")
             self.animation_1.setDuration(500)
