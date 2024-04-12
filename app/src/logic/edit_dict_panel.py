@@ -1,19 +1,5 @@
 from PyQt6 import QtCore, QtWidgets
 
-def validation(src_string):
-    """
-    Проверяет строку на наличие символов.
-
-    Args:
-        src_string (str): Исходная строка.
-
-    Returns:
-        bool: True, если строка не пустая, False в противном случае.
-    """
-    if len(src_string) > 0:
-        return True
-    else:
-        return False
 
 class EditDictPanel:
     """
@@ -27,6 +13,7 @@ class EditDictPanel:
         app: Объект приложения.
         openEditDictPanelStatus: Статус открытия панели редактирования словаря.
     """
+
     def __init__(self, main_win):
         """
         Инициализация объекта класса EditDictPanel.
@@ -73,7 +60,7 @@ class EditDictPanel:
         """
         word = self.main_win.leftEdit.text()
         meaning = self.main_win.rightEdit.text()
-        if validation(word) and validation(meaning):
+        if self.validation(word) and self.validation(meaning):
             record = (word, meaning)
             self.app.getController().add(record)
 
@@ -117,7 +104,7 @@ class EditDictPanel:
             new_word = self.main_win.leftEdit.text()
             new_meaning = self.main_win.rightEdit.text()
 
-            if validation(new_word) and validation(new_meaning):
+            if self.validation(new_word) and self.validation(new_meaning):
                 record = (new_word, new_meaning)
                 self.app.getController().update(self.app.getController().getTable()[curRow][0], record)
 
@@ -185,3 +172,18 @@ class EditDictPanel:
             self.animation_1.start()
 
             self.openEditDictPanelStatus = False
+
+    def validation(self, src_string):
+        """
+        Проверяет строку на наличие символов.
+
+        Args:
+            src_string (str): Исходная строка.
+
+        Returns:
+            bool: True, если строка не пустая, False в противном случае.
+        """
+        if len(src_string) > 0:
+            return True
+        else:
+            return False

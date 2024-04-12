@@ -439,9 +439,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.selectDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.selectDict()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.setDictsList"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.setDictsList()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.updateListDicts"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.updateListDicts()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.validation"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.validation()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.validation"><code class="docutils literal notranslate"><span class="pre">validation()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu.changedMode"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu.changedMode()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu.saveParameters"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu.saveParameters()</span></code></a></li>
@@ -466,9 +466,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.sortWord"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.sortWord()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.updateDictTable"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.updateDictTable()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.updateRow"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.updateRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.validation"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.validation()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.validation"><code class="docutils literal notranslate"><span class="pre">validation()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel"><code class="docutils literal notranslate"><span class="pre">PlayPanel</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel.dictClose"><code class="docutils literal notranslate"><span class="pre">PlayPanel.dictClose()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel.openPage"><code class="docutils literal notranslate"><span class="pre">PlayPanel.openPage()</span></code></a></li>
@@ -1700,11 +1700,9 @@ document.write(`
 <dd><p>Обновляет список словарей в боковом меню.</p>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="dicts_side_menu.validation">
-<span class="sig-prename descclassname"><span class="pre">dicts_side_menu.</span></span><span class="sig-name descname"><span class="pre">validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.validation" title="Link to this definition">#</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="dicts_side_menu.DictsSideMenu.validation">
+<span class="sig-name descname"><span class="pre">validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dicts_side_menu.DictsSideMenu.validation" title="Link to this definition">#</a></dt>
 <dd><p>Проверяет строку на наличие содержимого.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры<span class="colon">:</span></dt>
@@ -1717,6 +1715,8 @@ document.write(`
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class" id="module-parameters_side_menu">
@@ -1860,11 +1860,9 @@ document.write(`
 <dd><p>Обновляет выбранную запись в словаре.</p>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="edit_dict_panel.validation">
-<span class="sig-prename descclassname"><span class="pre">edit_dict_panel.</span></span><span class="sig-name descname"><span class="pre">validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.validation" title="Link to this definition">#</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="edit_dict_panel.EditDictPanel.validation">
+<span class="sig-name descname"><span class="pre">validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#edit_dict_panel.EditDictPanel.validation" title="Link to this definition">#</a></dt>
 <dd><p>Проверяет строку на наличие символов.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры<span class="colon">:</span></dt>
@@ -1877,6 +1875,8 @@ document.write(`
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class" id="module-play_panel">
@@ -2225,9 +2225,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.selectDict"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.selectDict()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.setDictsList"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.setDictsList()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.updateListDicts"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.updateListDicts()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.DictsSideMenu.validation"><code class="docutils literal notranslate"><span class="pre">DictsSideMenu.validation()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicts_side_menu.validation"><code class="docutils literal notranslate"><span class="pre">validation()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu.changedMode"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu.changedMode()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters_side_menu.ParametersSideMenu.saveParameters"><code class="docutils literal notranslate"><span class="pre">ParametersSideMenu.saveParameters()</span></code></a></li>
@@ -2252,9 +2252,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.sortWord"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.sortWord()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.updateDictTable"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.updateDictTable()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.updateRow"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.updateRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.EditDictPanel.validation"><code class="docutils literal notranslate"><span class="pre">EditDictPanel.validation()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit_dict_panel.validation"><code class="docutils literal notranslate"><span class="pre">validation()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel"><code class="docutils literal notranslate"><span class="pre">PlayPanel</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel.dictClose"><code class="docutils literal notranslate"><span class="pre">PlayPanel.dictClose()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play_panel.PlayPanel.openPage"><code class="docutils literal notranslate"><span class="pre">PlayPanel.openPage()</span></code></a></li>

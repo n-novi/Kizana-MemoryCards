@@ -4,22 +4,6 @@ from app.src.logic.play_panel import PlayPanel
 from app.src.logic.controller.Controller import Controller
 
 
-def validation(src_string):
-    """
-    Проверяет строку на наличие содержимого.
-
-    Args:
-        src_string (str): Входная строка для проверки.
-
-    Returns:
-        bool: True, если строка не пустая, иначе False.
-    """
-    if len(src_string) > 0:
-        return True
-    else:
-        return False
-
-
 class DictsSideMenu:
     """
     Класс для управления боковым меню со списком словарей.
@@ -149,7 +133,7 @@ class DictsSideMenu:
         Создает новый словарь.
         """
         name = self.main_win.dictEdit.text()
-        if validation(name):
+        if self.validation(name):
             name = self.dict_name_uniq(name)
             try:
                 f = open(self.dicts_folder_path + name + '.db', 'w')
@@ -180,7 +164,7 @@ class DictsSideMenu:
         """
         if self.selectedDict is not None:
             new_name = self.main_win.dictEdit.text()
-            if validation(new_name):
+            if self.validation(new_name):
                 file = self.dicts_folder_path + self.selectedDict + '.db'
                 new_file = self.dicts_folder_path + new_name + '.db'
 
@@ -231,3 +215,18 @@ class DictsSideMenu:
 
             self.main_win.listDicts.item(0).setSelected(True)
             self.selectDict(self.main_win.listDicts.item(0))
+
+    def validation(self, src_string):
+        """
+        Проверяет строку на наличие содержимого.
+
+        Args:
+            src_string (str): Входная строка для проверки.
+
+        Returns:
+            bool: True, если строка не пустая, иначе False.
+        """
+        if len(src_string) > 0:
+            return True
+        else:
+            return False
