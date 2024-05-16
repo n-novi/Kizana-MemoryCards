@@ -50,9 +50,13 @@ class ResultWindow(QtWidgets.QDialog, Ui_Dialog):
 
         self.mistakesTable.horizontalHeader().setSectionResizeMode(
             QtWidgets.QHeaderView.ResizeMode.Stretch)
-        self.mistakesTable.setHorizontalHeaderLabels(["Слово", "Значение", "Ваш ответ"])
+        self.mistakesTable.setHorizontalHeaderLabels(["Термин", "Определение", "Ваш ответ"])
 
         for i in range(len(mistakes_list)):
             self.mistakesTable.setItem(i, 0, QtWidgets.QTableWidgetItem(mistakes_list[i][1]))
             self.mistakesTable.setItem(i, 1, QtWidgets.QTableWidgetItem(mistakes_list[i][2]))
-            self.mistakesTable.setItem(i, 2, QtWidgets.QTableWidgetItem(user_answer_mistakes[i]))
+            user_answer = user_answer_mistakes[i]
+            if user_answer != "":
+                self.mistakesTable.setItem(i, 2, QtWidgets.QTableWidgetItem(user_answer))
+            else:
+                self.mistakesTable.setItem(i, 2, QtWidgets.QTableWidgetItem("-"))

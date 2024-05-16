@@ -10,6 +10,19 @@
     outline: none;
 }
 
+QSplitter {
+	width: 3px;
+}
+
+QSplitter::handle {
+	background-color: #121214;
+}
+
+QSplitterHandle:hover {}
+QSplitter::handle:horizontal:hover {
+	background-color: #414145;
+}
+
 QFrame {
     border: none;
     border-radius: 5px;
@@ -71,6 +84,7 @@ QListWidget::item, QListView::item {
     border-radius: 5px;
 
     padding: 5px;
+    margin: 2px;
 }
 
 QListWidget::item:hover {
@@ -222,12 +236,12 @@ QScrollBar:horizontal {
  
 QScrollBar::handle:horizontal {
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #39393d;
 }
  
 QTableWidget QScrollBar::handle::horizontal {
-    min-width: 20px;
+    min-width: 7px;
 }
  
 QScrollBar::add-line:horizontal {
@@ -241,13 +255,13 @@ QScrollBar::sub-line:horizontal {
 QScrollBar:vertical {
     border: none;
     background: #121214;
-    width: 10px;
+    width: 7px;
     margin: 0;
 }
  
 QScrollBar::handle:vertical {
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #39393d;
 }
  
@@ -277,7 +291,6 @@ QDialog {
     background-color: #121214;
 }
 
-
 #menu {
     background-color: #252427;
 
@@ -300,6 +313,14 @@ QDialog {
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
+}
+
+#dictcToolsPanel {
+    background-color: #252427;
+}
+
+#toolsEditPanel {
+    background-color: #252427;
 }
 
 #dictsBtnPanel, #editBtnPanel {
@@ -409,4 +430,26 @@ QDialog {
 
 #footer QLabel {
     color: #414145;
+}
+
+
+#moreInfoPanel {
+    background-color: #252427;
+    border-radius: 5px;
+}
+
+#mistakeCounter {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+
+    background-color: #252526;
+
+    border-radius: 5px;
+
+    padding: 5px;
+}
+
+#answerEdit {
+    font-size: 18px;
 }

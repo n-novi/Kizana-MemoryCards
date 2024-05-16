@@ -1,6 +1,9 @@
 import os
 import re
 from PyQt6 import QtCore, QtWidgets, QtGui
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QSplitter
+
 from app.src.ui.main_interface_ui import Ui_MainWindow
 from app.src.logic.side_menu import SideMenu
 from app.src.logic.play_panel import PlayPanel
@@ -17,6 +20,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         playPanel: Панель воспроизведения словаря.
         editDictPanel: Панель редактирования словаря.
     """
+
     def __init__(self, app):
         """
         Инициализация главного окна приложения.
@@ -27,6 +31,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self)
         self.app = app
         self.setupUi(self)
+
+        self.splitter = QSplitter(Qt.Orientation.Horizontal)
+        self.splitter.addWidget(self.frameSubMenu)
+        self.splitter.addWidget(self.frameMain)
+        self.bodylayout.addWidget(self.splitter)
+
         self.setSettings()
         self.setUiTheme()
 
@@ -227,8 +237,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.closeBtn.setIcon(dict_close__icon)
         self.closeBtn.setIconSize(QtCore.QSize(24, 24))
 
-        translate__icon = QtGui.QIcon("icons:translate.svg")
-        self.answerViewModeBtn.setIcon(translate__icon)
+        reverse__icon = QtGui.QIcon("icons:reverse_card.svg")
+        self.answerViewModeBtn.setIcon(reverse__icon)
         self.answerViewModeBtn.setIconSize(QtCore.QSize(64, 64))
 
         back__icon = QtGui.QIcon("icons:back.svg")
@@ -286,4 +296,3 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.svg_change_color("#d5d5d5")
             self.load_icon()
             self.load_style(theme_files["dark"])
-

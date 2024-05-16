@@ -136,7 +136,7 @@ class EditDictPanel:
         self.main_win.dictTable.horizontalHeader().setSectionResizeMode(0, QtWidgets.QHeaderView.ResizeMode.Stretch)
         self.main_win.dictTable.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeMode.Stretch)
 
-        self.main_win.dictTable.setHorizontalHeaderLabels(["Слово", "Значение"])
+        self.main_win.dictTable.setHorizontalHeaderLabels(["Термин", "Определение"])
 
         for i in range(len(dict_table)):
             self.main_win.dictTable.setItem(i, 0, QtWidgets.QTableWidgetItem(dict_table[i][1]))

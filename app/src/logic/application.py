@@ -7,7 +7,7 @@ from app.src.logic.main_window import MainWindow
 from app.src.logic.controller.Controller import Controller
 import ctypes
 
-myappid = u'Kizana.Flash_v2.1'
+myappid = u'Kizana.MemoryCards_v2.2'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 
@@ -66,7 +66,7 @@ class Application(QtWidgets.QApplication):
         self.playSession = False
 
         self.configApplication()
-        self.setWindowIcon(QtGui.QIcon(str(self.icon_folder_path) + "/app_icon/app_icon.svg"))
+        self.setWindowIcon(QtGui.QIcon(str(self.icon_folder_path) + "/app_icon/app_icon_2.svg"))
         self.openMainWindow()
 
     def configApplication(self):

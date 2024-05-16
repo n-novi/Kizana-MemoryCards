@@ -1,16 +1,17 @@
 {
     "app_info": {
         "app_company": "Kizana",
-        "app_title": "Flash...",
+        "app_title": "Kizana MemoryCards",
         "author": [
             "Аскерова Айлана Рагимовна",
             "Кутушева Эльза Ибрагимовна",
-            "Новиков Никита Евгеньевич"
+            "Новиков Никита Евгеньевич",
+            "Юсипов Равиль Рифкатевич"
         ],
         "developer": [
             "Новиков Н.Е."
         ],
-        "app_version": "2.1"
+        "app_version": "2.2"
     },
     "app_path": {
         "icon": "app/res/icon/",
@@ -22,7 +23,7 @@
         }
     },
     "app_settings": {
-        "theme": "dark"
+        "theme": "light"
     },
     "app_play_parameters": {
         "mode": 1

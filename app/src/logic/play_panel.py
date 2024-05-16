@@ -40,7 +40,11 @@ class PlayPanel:
 
             if self.app.getController().getTableSize() == 0:
                 self.main_win.stackedWidgetMode.setCurrentIndex(3)
+                self.main_win.reloadBtn.setHidden(True)
+                self.main_win.shuffleBtn.setHidden(True)
             else:
+                self.main_win.reloadBtn.setHidden(False)
+                self.main_win.shuffleBtn.setHidden(False)
                 mode = self.app.getMode()
                 if mode == self.app.MODE.View:
                     self.main_win.stackedWidgetMode.setCurrentIndex(4)
@@ -66,7 +70,9 @@ class PlayPanel:
         """
         Закрывает игровую панель и возвращает к предыгровой странице.
         """
+        self.app.getController().close()
         self.app.setPlaySession(False)
         if self.main_win.getEditDictPanel().getOpenEditDictPanelStatus():
             self.main_win.getEditDictPanel().animationEditDictPanel()
+            self.main_win.editBtn.setChecked(False)
         self.openPage()

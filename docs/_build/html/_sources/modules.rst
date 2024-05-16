@@ -1,9 +1,5 @@
 Модули
 =======
-
-* :ref:`modindex`
-* :ref:`search`
-
 .. automodule:: Controller
     :members:
     :undoc-members:

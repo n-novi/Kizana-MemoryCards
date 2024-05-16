@@ -2,7 +2,7 @@ import os, shutil
 from PyQt6 import QtCore, QtWidgets
 from app.src.logic.play_panel import PlayPanel
 from app.src.logic.controller.Controller import Controller
-
+from app.src.logic.message_window import MessageWindow
 
 class DictsSideMenu:
     """
@@ -140,6 +140,9 @@ class DictsSideMenu:
                 f.close()
             except IOError as e:
                 print("Не удалось создать словарь")
+                dialog = MessageWindow("Не удалось создать словарь")
+                dialog.setWindowTitle('Ошибка')
+                result = dialog.exec()
 
             self.updateListDicts()
             self.main_win.dictEdit.clear()
@@ -154,6 +157,10 @@ class DictsSideMenu:
                 os.remove(self.dicts_folder_path + self.selectedDict + '.db')
             except OSError as e:
                 print("Не удалось удалить словарь")
+                dialog = MessageWindow("Не удалось удалить словарь")
+                dialog.setWindowTitle('Ошибка')
+                result = dialog.exec()
+
             self.updateListDicts()
             self.main_win.dictEdit.clear()
             self.main_win.getPlayPanel().openPage()
@@ -172,6 +179,9 @@ class DictsSideMenu:
                     os.rename(file, new_file)
                 except OSError as e:
                     print("Не удалось переименовать словарь")
+                    dialog = MessageWindow("Не удалось переименовать словарь")
+                    dialog.setWindowTitle('Ошибка')
+                    result = dialog.exec()
 
                 self.updateListDicts()
                 self.main_win.dictEdit.clear()
@@ -185,7 +195,10 @@ class DictsSideMenu:
             try:
                 shutil.copy2(folder + self.selectedDict + '.db', folder + self.selectedDict + '_copy.db')
             except IOError as e:
-                print("Не удалось скопировать файл!")
+                print("Не удалось скопировать файл")
+                dialog = MessageWindow("Не удалось скопировать файл")
+                dialog.setWindowTitle('Ошибка')
+                result = dialog.exec()
 
             self.updateListDicts()
 

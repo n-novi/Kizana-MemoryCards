@@ -21,6 +21,8 @@ sdist/
 var/
 wheels/
 share/python-wheels/
+output/
+installer/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -153,3 +155,5 @@ dmypy.json
 cython_debug/
 
 .idea
+
+*.iss

@@ -1,4 +1,7 @@
 from PyQt6 import QtCore, QtWidgets
+from PyQt6.QtCore import QPropertyAnimation, QEasingCurve, QAbstractAnimation
+from PyQt6.QtWidgets import QPushButton, QWidget
+
 from app.src.logic.dicts_side_menu import DictsSideMenu
 from app.src.logic.parameters_side_menu import ParametersSideMenu
 from app.src.logic.settings_side_menu import SettingsSideMenu
@@ -13,124 +16,114 @@ class SideMenu:
     """
 
     def __init__(self, main_win):
-        """
-        Инициализация объекта класса SideMenu.
+        self.__mw_view = main_win  # представление главного окна, в котором расположены элементы панели
 
-        Args:
-            main_win: Основное окно приложения.
-        """
-        self.main_win = main_win
+        # max_width >= start_width >= min_width > closed_width >= 0
+        self.__max_width = 480  # максимальная ширина панели
+        self.__start_width = 250  # начальная ширина панели
+        self.__min_width = 250  # минимальная ширина панели
+        self.__closed_width = 0  # ширина панели при закрытии
+        self.__previous_width = self.__start_width  # предыдущая ширина панели
 
-        self.dictSideMenu = None
-        self.parametersSideMenu = None
-        self.settingsSideMenu = None
+        self.__animation = None  # QPropertyAnimation
+        self.__open_animation_duration = 400  # продолжительность анимации
 
-        self.listMenuItem = []  # список всех элементов (кнопок) меню
-        self.openSideMenuStatus = True  # боковое меню открыто/закрыто
+        self.dictSideMenu = DictsSideMenu(self.__mw_view)
+        self.parametersSideMenu = ParametersSideMenu(self.__mw_view)
+        self.settingsSideMenu = SettingsSideMenu(self.__mw_view)
 
-        self.initSideMenu()
-        self.fillListMenuItem()
+        # соответствие кнопок меню и страниц панели
+        self.__button_to_page_mapping = {self.__mw_view.dictsBtn: self.__mw_view.dictsPage,
+                                         self.__mw_view.parBtn: self.__mw_view.parPage,
+                                         self.__mw_view.infoBtn: self.__mw_view.infoPage,
+                                         self.__mw_view.settingsBtn: self.__mw_view.settingsPage,
+                                         self.__mw_view.helpBtn: self.__mw_view.helpPage}
 
-        # слушатели кнопок
-        self.main_win.dictsBtn.clicked.connect(lambda: self.menu_item(self.main_win.dictsBtn, 0))
-        self.main_win.parBtn.clicked.connect(lambda: self.menu_item(self.main_win.parBtn, 1))
-        self.main_win.settingsBtn.clicked.connect(lambda: self.menu_item(self.main_win.settingsBtn, 2))
-        self.main_win.infoBtn.clicked.connect(lambda: self.menu_item(self.main_win.infoBtn, 3))
-        self.main_win.helpBtn.clicked.connect(lambda: self.menu_item(self.main_win.helpBtn, 4))
+        self.__cur_button = self.__mw_view.dictsBtn
+        self.__is_opened = True  # панель открыта \ закрыта
+        self.__initState(self.__cur_button)
+        self.__initButtonsSignals()
+        self.__mw_view.splitter.splitterMoved.connect(self.__changePanelBySplitter)
 
-    def initSideMenu(self):
-        """
-        Инициализация бокового меню.
-        """
-        if not self.openSideMenuStatus:
-            self.main_win.frameSubMenu.setMaximumWidth(0)
-            self.main_win.dictsBtn.setChecked(False)
-        else:
-            self.main_win.frameSubMenu.setMaximumWidth(270)
-            self.main_win.dictsBtn.setChecked(True)
-            self.main_win.stackedWidgetMenu.setCurrentIndex(0)
-            self.dictSideMenu = DictsSideMenu(self.main_win)
+    # Логика закрытия \ открытия панели заключается в установлении максимальной ширины панели
+    def __initState(self, active_button: QPushButton):  # установка стартового состояния панели
+        self.__mw_view.stackedWidgetMenu.setCurrentWidget(
+            self.__button_to_page_mapping[active_button])  # установка стартовой страницы
+        self.__mw_view.frameSubMenu.setMaximumWidth(self.__max_width if self.__is_opened else self.__closed_width)
+        self.__mw_view.frameSubMenu.setMinimumWidth(self.__start_width if self.__is_opened else self.__closed_width)
 
-    def fillListMenuItem(self):
-        """
-        Заполнение списка элементов (кнопок) меню.
-        """
-        self.listMenuItem.append(self.main_win.dictsBtn)
-        self.listMenuItem.append(self.main_win.parBtn)
-        self.listMenuItem.append(self.main_win.settingsBtn)
-        self.listMenuItem.append(self.main_win.infoBtn)
-        self.listMenuItem.append(self.main_win.helpBtn)
+        self.__mw_view.splitter.setCollapsible(0, True)  # левая область сплиттера может закрываться
+        self.__mw_view.splitter.setCollapsible(1, False)  # правая область сплиттера не может закрываться
+        self.__mw_view.splitter.setCollapsible(2, True)  # правая область сплиттера не может закрываться
+        self.__mw_view.splitter.setSizes([self.__start_width if self.__is_opened else self.__closed_width])
 
-    def offMenuItems(self, itemOn):
-        """
-        Выключение всех элементов меню кроме одного.
+        active_button.setChecked(self.__is_opened)
 
-        Args:
-            itemOn: Элемент меню, который нужно оставить включенным.
-        """
-        for item in self.listMenuItem:
-            if isinstance(item, QtWidgets.QPushButton):
-                if item != itemOn:
-                    item.setChecked(False)
-                else:
-                    item.setChecked(True)
+    def __initButtonsSignals(self):  # установка сигналов кнопок меню
+        for button, page in self.__button_to_page_mapping.items():
+            button.clicked.connect(self.__createHandler(button, page))
 
-    def actionMenuItem(self, button):
-        """
-        Выполнение действия для выбранного элемента меню.
+    def __createHandler(self, button, page):
+        return lambda: self.__changePanelByButtons(button, page)
 
-        Args:
-            button: Выбранный элемент меню.
-        """
-        if button == self.main_win.dictsBtn:
-            self.dictSideMenu = DictsSideMenu(self.main_win)
-        if button == self.main_win.parBtn:
-            self.parametersSideMenu = ParametersSideMenu(self.main_win)
-        if button == self.main_win.settingsBtn:
-            self.settingsSideMenu = SettingsSideMenu(self.main_win)
-
-    def menu_item(self, button, page):
-        """
-        Переключение пунктов меню.
-
-        Args:
-            button: Выбранный элемент меню.
-            page: Номер страницы для переключения.
-        """
-        if not isinstance(button, QtWidgets.QPushButton):
+    def __changePanelByButtons(self, button: QPushButton, page: QWidget):  # смена страниц при нажатии кнопок
+        if self.__animation is not None and self.__animation.state() == QAbstractAnimation.State.Running:  # кнопки не активны пока идет анимация
+            for button in self.__button_to_page_mapping.keys():
+                button.setChecked((button == self.__cur_button) * self.__is_opened)
             return
 
+        print(type(button))
+        print(button)
+        print(self.__button_to_page_mapping)
+
         if button.isChecked():
-            self.main_win.stackedWidgetMenu.setCurrentIndex(page)
-            self.actionMenuItem(button)
-            self.offMenuItems(button)
-            if not self.openSideMenuStatus:
-                self.animationSideMenu()
-        else:
-            button.setChecked(True)
-            if self.openSideMenuStatus:
-                self.animationSideMenu()
-                button.setChecked(False)
+            self.__mw_view.stackedWidgetMenu.setCurrentWidget(page)
+            self.__cur_button.setChecked(False)
+            self.__cur_button = button
+            self.__cur_button.setChecked(True)
+            if not self.__is_opened:  # открыть панель
+                self.__changeWidthByButton()
 
-    def animationSideMenu(self):
-        """
-        Анимация открытия и закрытия бокового меню.
-        """
-        if not self.openSideMenuStatus:
-            self.animation_1 = QtCore.QPropertyAnimation(self.main_win.frameSubMenu, b"maximumWidth")
-            self.animation_1.setDuration(500)
-            self.animation_1.setStartValue(0)
-            self.animation_1.setEndValue(270)
-            self.animation_1.setEasingCurve(QtCore.QEasingCurve.Type.InOutQuart)
-            self.animation_1.start()
+        elif self.__is_opened:  # закрыть панель
+            self.__previous_width = self.__mw_view.frameSubMenu.width()  # сохранение щирины панели
+            self.__changeWidthByButton()
 
-            self.openSideMenuStatus = True
-        else:
-            self.animation_1 = QtCore.QPropertyAnimation(self.main_win.frameSubMenu, b"maximumWidth")
-            self.animation_1.setDuration(500)
-            self.animation_1.setStartValue(self.main_win.frameSubMenu.width())
-            self.animation_1.setEndValue(0)
-            self.animation_1.setEasingCurve(QtCore.QEasingCurve.Type.InOutQuart)
-            self.animation_1.start()
+    def __changePanelBySplitter(self, pos):  # изменение ширины панели через сплиттер
+        self.__mw_view.frameSubMenu.setMaximumWidth(self.__max_width)
+        self.__mw_view.frameSubMenu.setMinimumWidth(self.__min_width)
 
-            self.openSideMenuStatus = False
+        if pos == self.__closed_width and self.__is_opened:
+            self.__is_opened = False
+            self.__cur_button.setChecked(False)
+
+        elif pos > self.__closed_width + 1 and not self.__is_opened:
+            self.__is_opened = True
+            self.__cur_button.setChecked(True)
+
+    def __toggleMenuButtons(self, checked_button: QPushButton):  # отключение кнопок
+        for button in self.__button_to_page_mapping.keys():
+            button.setChecked(button == checked_button)
+
+    def __changeWidthByButton(self):  # изменение ширины панели через кнопки
+        start_value = self.__mw_view.frameSubMenu.width() if self.__is_opened else self.__closed_width
+        end_value = self.__closed_width if self.__is_opened else self.__previous_width
+
+        self.__mw_view.frameSubMenu.setMinimumWidth(self.__closed_width)
+
+        self.__animation = QPropertyAnimation(self.__mw_view.frameSubMenu, b"maximumWidth")
+        self.__animation.setDuration(self.__open_animation_duration)
+        self.__animation.setStartValue(start_value)
+        self.__animation.setEndValue(end_value)
+        self.__animation.setEasingCurve(QEasingCurve.Type.InOutCubic)
+        self.__animation.valueChanged.connect(self.__onValueChanged)
+        self.__animation.finished.connect(self.__restoreMinimumWidth)
+        self.__animation.start()
+
+        self.__is_opened = not self.__is_opened
+
+    def __onValueChanged(self, value):  # при изменении значений анимации (ширины панели)
+        self.__mw_view.splitter.setSizes([value])
+
+    def __restoreMinimumWidth(self):  # Восстановление минимальной ширины
+        if self.__is_opened:
+            self.__mw_view.frameSubMenu.setMinimumWidth(self.__min_width)

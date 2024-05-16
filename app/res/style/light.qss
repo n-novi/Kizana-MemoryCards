@@ -10,6 +10,19 @@
     outline: none;
 }
 
+QSplitter {
+	width: 3px;
+}
+
+QSplitter::handle {
+	background-color: #f5f6fa;
+}
+
+QSplitterHandle:hover {}
+QSplitter::handle:horizontal:hover {
+	background-color: #dee3ef;
+}
+
 QFrame {
     border: none;
     border-radius: 5px;
@@ -71,6 +84,7 @@ QListWidget::item, QListView::item {
     border-radius: 5px;
 
     padding: 5px;
+    margin: 2px;
 }
 
 QListWidget::item:hover {
@@ -215,21 +229,21 @@ QTableWidget::item:selected:active {
 
 QScrollBar:horizontal {
     border: none;
-    background: #dee3ef;
+    background: #f5f6fa;
     height: 10px;
     margin: 0;
 }
  
 QScrollBar::handle:horizontal {
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #eaecf3;
 }
- 
+
 QTableWidget QScrollBar::handle::horizontal {
-    min-width: 20px;
+    min-width: 7px;
 }
- 
+
 QScrollBar::add-line:horizontal {
     width: 0px;
 }
@@ -240,14 +254,14 @@ QScrollBar::sub-line:horizontal {
  
 QScrollBar:vertical {
     border: none;
-    background: #dee3ef;
-    width: 10px;
+    background: #f5f6fa;
+    width: 7px;
     margin: 0;
 }
  
 QScrollBar::handle:vertical {
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #eaecf3;
 }
  
@@ -273,6 +287,9 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
     background: none;
 }
 
+QDialog {
+    background-color: #f5f6fa;
+}
 
 #menu {
     background-color: #ffffff;
@@ -296,6 +313,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
     color: #002033;
     font-size: 16px;
     font-weight: bold;
+}
+
+#dictcToolsPanel {
+    background-color: #ffffff;
+}
+
+#toolsEditPanel {
+    background-color: #ffffff;
 }
 
 #dictsBtnPanel, #editBtnPanel {
@@ -405,4 +430,25 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
 
 #footer QLabel {
     color: #dee3ef;
+}
+
+#moreInfoPanel {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+#mistakeCounter {
+    color: #002033;
+    font-size: 16px;
+    font-weight: bold;
+
+    background-color: #ffffff;
+
+    border-radius: 5px;
+
+    padding: 5px;
+}
+
+#answerEdit {
+    font-size: 18px;
 }

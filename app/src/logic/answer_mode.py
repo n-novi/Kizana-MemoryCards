@@ -47,6 +47,7 @@ class AnswerMode:
 
         if self.app.getController().getEnd() is True:
             dialog = ResultWindow(self.main_win)
+            dialog.setWindowTitle('Результат')
             result = dialog.exec()
             self.reload()
 
